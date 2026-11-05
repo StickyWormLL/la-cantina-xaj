@@ -1,0 +1,25 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+@use 'base/reset';
+@use 'base/base';
+@use 'base/typography';
+
+@use 'themes/light-theme';
+@use 'themes/dark-theme';
+
+@use 'layout/grid';
+@use 'layout/header';
+@use 'layout/footer';
+
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/ticket';
+
+@use 'pages/home';
+@use 'pages/compra';
+@use 'pages/admin';
+
+body {
+    background-color: red;
+}
