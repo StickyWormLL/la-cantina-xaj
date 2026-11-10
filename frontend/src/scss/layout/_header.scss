@@ -1,0 +1,23 @@
+header{
+    @media (min-width:1024px) {
+        display: grid;
+        grid-template-rows: 8fr, 3;
+        grid-template-areas: 
+        "icona . . . . . text-ies text-ies"
+        ". . titol" "titol" "titol" "titol . ."
+        ". . . . . nav nav nav";
+    }
+    background-color: #f5f5f5;
+}
+#iconaCantina{
+    grid-area: icona;
+}
+#titolWeb{
+    grid-area: titol;
+}
+#nomInstitut{
+    grid-area: text-ies;
+}
+#connexxions {
+    grid-area: nav;
+}
