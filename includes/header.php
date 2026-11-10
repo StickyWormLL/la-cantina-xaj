@@ -20,7 +20,7 @@
         <a href="../src/tickets.php">#IMAGE_icona_Cor</a> 
         <!-- en pantalla gran, només icona. movil, 
         dins hamburguesa després --> 
-        
+            
     </nav>
 
 </header>
