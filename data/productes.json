@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "nom": "Entrepà de pernil",
+    "preu": 2.50,
+    "img": "../assets/img/products/bocadillo_jamon.png"
+  },
+  {
+    "id": 2,
+    "nom": "Entrepà de llom",
+    "preu": 3.00,
+    "img": "../assets/img/products/bocadillo_lomo.png"
+  },
+  {
+    "id": 3,
+    "nom": "Entrepà de pinxo moruno",
+    "preu": 3.20,
+    "img": "../assets/img/products/bocadillo_pincho_moruno.png"
+  },
+  {
+    "id": 4,
+    "nom": "Entrepà de formatge",
+    "preu": 2.30,
+    "img": "../assets/img/products/bocadillo_queso.png"
+  },
+  {
+    "id": 5,
+    "nom": "Entrepà de truita",
+    "preu": 2.60,
+    "img": "../assets/img/products/bocadillo_tortilla.png"
+  },
+  {
+    "id": 6,
+    "nom": "Entrepà vegetal de tonyina",
+    "preu": 3.00,
+    "img": "../assets/img/products/bocadillo_vegetal_atun.png"
+  },
+  {
+    "id": 7,
+    "nom": "Ampolla d'aigua",
+    "preu": 1.00,
+    "img": "../assets/img/products/botella_agua.png"
+  },
+  {
+    "id": 8,
+    "nom": "Cafè",
+    "preu": 1.20,
+    "img": "../assets/img/products/cafe.png"
+  },
+  {
+    "id": 9,
+    "nom": "Cheetos Pandilla",
+    "preu": 1.30,
+    "img": "../assets/img/products/cheetos_pandilla.png"
+  },
+  {
+    "id": 10,
+    "nom": "Croissant",
+    "preu": 1.40,
+    "img": "../assets/img/products/croissant.png"
+  },
+  {
+    "id": 11,
+    "nom": "Croissant de frankfurt",
+    "preu": 2.20,
+    "img": "../assets/img/products/croissant_frankfurt.png"
+  },
+  {
+    "id": 12,
+    "nom": "Galetes Dinosaurus",
+    "preu": 1.50,
+    "img": "../assets/img/products/dinosaurus.png"
+  },
+  {
+    "id": 13,
+    "nom": "Dònut de xocolata",
+    "preu": 1.50,
+    "img": "../assets/img/products/donut_chocolate.png"
+  },
+  {
+    "id": 14,
+    "nom": "Empanada de tonyina",
+    "preu": 2.00,
+    "img": "../assets/img/products/empanada_atun.png"
+  },
+  {
+    "id": 15,
+    "nom": "Amanida",
+    "preu": 3.50,
+    "img": "../assets/img/products/ensalada.png"
+  },
+  {
+    "id": 16,
+    "nom": "Hamburguesa",
+    "preu": 3.80,
+    "img": "../assets/img/products/hamburgesa.png"
+  },
+  {
+    "id": 17,
+    "nom": "Llauna de Coca-Cola",
+    "preu": 1.50,
+    "img": "../assets/img/products/lata_coca_cola.png"
+  },
+  {
+    "id": 18,
+    "nom": "Llauna de Fanta de llimona",
+    "preu": 1.50,
+    "img": "../assets/img/products/lata_fanta_limon.png"
+  },
+  {
+    "id": 19,
+    "nom": "Llauna de Fanta de taronja",
+    "preu": 1.50,
+    "img": "../assets/img/products/lata_fanta_naranja.png"
+  },
+  {
+    "id": 20,
+    "nom": "Galetes Oreo",
+    "preu": 1.50,
+    "img": "../assets/img/products/oreo.png"
+  },
+  {
+    "id": 21,
+    "nom": "Panini de tonyina",
+    "preu": 2.50,
+    "img": "../assets/img/products/panini_atun.png"
+  },
+  {
+    "id": 22,
+    "nom": "Pelotazos",
+    "preu": 1.30,
+    "img": "../assets/img/products/pelotazos.png"
+  },
+  {
+    "id": 23,
+    "nom": "Rueditas",
+    "preu": 1.30,
+    "img": "../assets/img/products/rueditas.png"
+  },
+  {
+    "id": 24,
+    "nom": "Te calent",
+    "preu": 1.20,
+    "img": "../assets/img/products/te.png"
+  },
+  {
+    "id": 25,
+    "nom": "Te fred",
+    "preu": 1.50,
+    "img": "../assets/img/products/te_frio.png"
+  },
+  {
+    "id": 26,
+    "nom": "Suc Bifrutas",
+    "preu": 1.40,
+    "img": "../assets/img/products/zumo_bifrutas.png"
+  }
+]
