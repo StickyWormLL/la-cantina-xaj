@@ -1,13 +1,14 @@
-## COMANDO PARA COMPILAR SCSS
+# COMANDO PARA COMPILAR SCSS
 
 cd assets/scss
 npx sass main.scss ../css/styles.css
 
-Xander: 
-    - Funció carrousel de imatges 
+Xander:
+    - Funció carrousel de imatges
     - Web inici php amb css implantat
     - condicions php css implantat
-Joel: 
+Joel:
+    - solucionar redirecciones
     - funcion de carret (com l'activitat de js)
     - web compra php amb css implantat
     - inserció de imatges
