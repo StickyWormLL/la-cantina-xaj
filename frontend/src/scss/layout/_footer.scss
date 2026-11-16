@@ -1,0 +1,23 @@
+@media (min-width: 1024px) {
+    footer {
+        display: grid;
+        grid-template-columns:repeat(8fr, 1fr);
+        grid-template-areas: 
+        "titfooter titfooter titfooter titfooter titfooter titfooter txtfooter txtfooter";
+    }
+}
+@media (max-width: 1023px) {
+    footer {
+        display: grid;
+        grid-template-columns:repeat(1fr, 1fr);
+        grid-template-areas: 
+        "titfooter"
+        "txtfooter";
+    }
+}
+#titolfooter {
+    grid-area: titfooter;
+}
+#textfooter {
+    grid-area: txtfooter;
+}
