@@ -1,8 +1,11 @@
 @media (min-width: 1024px) {
   header {
     display: grid;
-    grid-template-rows: 8fr, 3;
-    grid-template-areas: "icona . . . . . text-ies text-ies" ". . titol" "titol" "titol" "titol . ." ". . . . . nav nav nav";
+    grid-template-columns:repeat(8,2fr);
+    grid-template-areas: 
+    "icona . . . . . text-ies text-ies"
+    ". . titol titol titol titol . ."
+    ". . . . . nav nav nav";
   }
 }
 header {
@@ -21,7 +24,8 @@ header {
   grid-area: text-ies;
 }
 
-#connexxions {
+#connexions {
+
   grid-area: nav;
 }
 
