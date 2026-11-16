@@ -1,34 +1,15 @@
 @media (min-width: 1024px) {
-  header {
-    display: grid;
-    grid-template-columns:repeat(8,2fr);
-    grid-template-areas: 
-    "icona . . . . . text-ies text-ies"
-    ". . titol titol titol titol . ."
-    ". . . . . nav nav nav";
-  }
-}
-header {
-  background-color: #f5f5f5;
+    footer {
+        display: grid;
+        grid-template-columns:repeat(8,1fr);
+        grid-template-areas: 
+        "titfooter titfooter titfooter titfooter titfooter titfooter txtfooter txtfooter";
+    }
 }
 
-#iconaCantina {
-  grid-area: icona;
+#titolfooter {
+    grid-area: titfooter;
 }
-
-#titolWeb {
-  grid-area: titol;
+#textfooter {
+    grid-area: txtfooter;
 }
-
-#nomInstitut {
-  grid-area: text-ies;
-}
-
-#connexions {
-
-  grid-area: nav;
-}
-
-body {
-  background-color: red;
-}/*# sourceMappingURL=main.css.map */

@@ -1,10 +1,10 @@
 <footer class="footer">
     <div class="footer__grid">
         <div>
-            <h1>Cantina JAX</h1>
+            <h1 id="titolfooter">Cantina JAX</h1>
         </div>
         <div>
-            <span>Fet per: Arnau Serrano, Joel Joan Castillo i Xavier Sánchez.</h1>
+            <span id="textfooter">Fet per: Arnau Serrano, Joel Joan Castillo i Xavier Sánchez.</span>
         </div>
     </div>
 </footer>

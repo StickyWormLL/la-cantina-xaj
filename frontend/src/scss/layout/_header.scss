@@ -1,23 +1,28 @@
-header{
-    @media (min-width:1024px) {
+@media (min-width: 1024px) {
+    header {
         display: grid;
-        grid-template-rows: 8fr, 3;
+        grid-template-columns:repeat(8,2fr);
         grid-template-areas: 
-        "icona . . . . . text-ies text-ies"
-        ". . titol" "titol" "titol" "titol . ."
-        ". . . . . nav nav nav";
+        "icona . . titol titol titol nav nav"
+        "text-ies text-ies . . . . . .";
     }
+}
+header {
     background-color: #f5f5f5;
 }
-#iconaCantina{
+
+#iconaCantina {
     grid-area: icona;
 }
-#titolWeb{
+
+#titolWeb {
     grid-area: titol;
 }
-#nomInstitut{
+
+#nomInstitut {
     grid-area: text-ies;
 }
-#connexxions {
+
+#connexions {
     grid-area: nav;
 }
