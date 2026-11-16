@@ -20,6 +20,47 @@
 @use 'pages/compra';
 @use 'pages/admin';
 
-body {
-    background-color: red;
+/* Estilos del carrusel */
+.carousel-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%; /* 100% * 3 imágenes */
+    animation: slide 12s infinite ease-in-out;
+}
+
+.carousel-images img {
+    width: 350px; /* Se ajusta al contenedor */
+    height: 350px;
+    flex: 0 0 auto; /* 3 imágenes en un 100% */
+    object-fit: cover; /* Evita distorsión */
+    object-position: center;
+}
+
+@keyframes slide {
+        0% { transform: translateX(0); }  
+        14.2% { transform: translateX(-100%); }  
+        28.4% { transform: translateX(-200%); } 
+        42.6%{ transform: translateX(-300%); } 
+        56.8% { transform: translateX(-400%); }
+        71%{ transform: translateX(-500%); }
+        85% {transform: translateX(0%);}
+         /* Transición suave al inicio */
+    }
+#wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3 {
+    margin: 0 auto;
+}
+li {
+    text-align: center;
+}
+ul li img {
+    width: 350px;
 }
