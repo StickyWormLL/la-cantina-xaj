@@ -21,9 +21,10 @@
                 <img src="../assets/img/products/bocadillo_jamon.png" alt="Imagen 1">
                 <img src="../assets/img/products/empanada_atun.png" alt="Imagen 2">
                 <img src="../assets/img/products/lata_coca_cola.png" alt="Imatge 3">
-                <img src="../assets/img/products/dinosaurus.png" alt="Imagen 4">
+                <img src="../assets/img/products/cafe.png" alt="Imatge 4">
                 <img src="../assets/img/products/panini_atun.png" alt="Imagen 5">
                 <img src="../assets/img/products/croissant.png" alt="Imagen 6">
+                <img src="../assets/img/products/bocadillo_jamon.png" alt="imagen 7">
             </div>
         </div>
     <?php
