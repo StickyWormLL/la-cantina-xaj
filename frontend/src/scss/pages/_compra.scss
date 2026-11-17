@@ -1,0 +1,40 @@
+.catalegProductes {
+    display: grid;
+    padding: 20px;
+    margin: 20px;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    
+    .nom-producte {
+        color:wheat;
+        font-size: 24px;
+         
+        
+    }
+
+    .preu-producte {
+        color:wheat;
+        font-size: 16px;
+    }
+
+    .img-producte {
+        display: flex;
+        height: auto;
+        padding: -10px;
+        margin: -10px;
+        background-color: rgb(131, 175, 95);
+        border-color: rgb(131, 175, 95);
+        border-radius: 10px;
+    }
+
+    .btn-afegirCarret {
+        cursor: pointer;
+        background-color: rgb(131, 175, 95);
+        border-radius: 10px;
+        border-color: rgb(113, 152, 82);
+        font-size: 16px;
+    }
+}
