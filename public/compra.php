@@ -6,13 +6,17 @@ $llistaProductes = carregarProductes();
 
 <h1>Tots els nostres productes:</h1>
 
-    <section class="catalegProductes">
+<section class="catalegProductes">
+
     <?php foreach ($llistaProductes as $producte): ?>
-        <article class="card">
-            <h3><?= $producte['nom'] ?></h3>
-            <p>Preu: <?= $producte['preu'] ?></p>
+        <article class="card-producte">
+            <h3 class="nom-producte"><?= $producte['nom'] ?></h3>
+            <img class="img-producte" src="<?= $producte['img']?>">
+            <p class="preu-producte">Preu: <?= $producte['preu'] ?> euros</p>
+            <button class="btn-afegirCarret">Afegeix al carret</button>
         </article>
     <?php endforeach; ?>
+    
 </section>
-    </section>
+
 <?php include '../includes/footer.php'; ?>
