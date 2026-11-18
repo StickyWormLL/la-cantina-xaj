@@ -20,3 +20,6 @@ $llistaProductes = carregarProductes();
 </section>
 
 <?php include '../includes/footer.php'; ?>
+
+</body>
+</html>

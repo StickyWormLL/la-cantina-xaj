@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(100, 135, 71);
+}
+
 @media (min-width: 1024px) {
   header {
     display: grid;
@@ -79,10 +83,6 @@ header {
   border-radius: 10px;
   border-color: rgb(113, 152, 82);
   font-size: 16px;
-}
-
-body {
-  background-color: rgb(100, 135, 71);
 }
 
 /*# sourceMappingURL=main.css.map */

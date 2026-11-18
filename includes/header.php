@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de productes</title>
+    <style href="/frontend/src/scss/main.css"></style>
+    <script type="module" src="http://localhost:5173/@vite/client">
+    </script>
+    <script type="module" src="http://localhost:5173/src/js/main.js">
+    </script>
+</head>
+<body>
+    
 <header class="header">
     <div class="container header__inner">
         <a href="/inici.php" class="logo">

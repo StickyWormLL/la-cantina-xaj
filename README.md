@@ -10,8 +10,8 @@ Xander:
 Arnau:
     - solucionar redirecciones
     - funcion de carret (com l'activitat de js)
-    - web compra php amb css implantat
-    - inserció de imatges
+    - web compra php amb css implantat  
+    - inserció de imatges 
 Joel:
     - ticket php css implantat
     - finalitzacio php css implantat
