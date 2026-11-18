@@ -6,7 +6,10 @@ function carregarProductes() {
     return $productes;
 } 
 
-$llistaProductes = carregarProductes();
-// PARA LLAMAR A UN PRODUCTO DETERMINADO, USAR $productes[x]['y']
-// x REFIERE A NUMERO DE INDICE, y REFIERE A CATEGORIA (id,nom,preu,img) 
+/*  
+    PRIMERO HAY QUE IMPORTAR LA FUNCIÓN Y CARGARLA DENTRO DE UNA VARIABLE PARA RECORRERLA
+    PARA LLAMAR A UN PRODUCTO DETERMINADO, USAR $productes[x]['y']
+    x REFIERE A NUMERO DE INDICE, y REFIERE A CATEGORIA (id,nom,preu,img) 
+*/
+
 ?>

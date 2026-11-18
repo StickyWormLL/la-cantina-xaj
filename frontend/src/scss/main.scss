@@ -23,7 +23,7 @@
 /* Estilos del carrusel */
 .carousel-container {
     position: relative;
-    width: 50%;
+    width: 350px;
     height: 350px;
     margin: auto;
     overflow: hidden;
@@ -38,7 +38,7 @@
 }
 
 .carousel-images img {
-    width: 100%; /* Se ajusta al contenedor */
+    width: 350px; /* Se ajusta al contenedor */
     height: 350px;
     flex: 0 0 auto; /* 3 imágenes en un 100% */
     object-fit: cover; /* Evita distorsión */
@@ -47,12 +47,12 @@
 
 @keyframes slide {
         0% { transform: translateX(0); }  
-        16.66% { transform: translateX(-100%); }  
-        33.32% { transform: translateX(-200%); } 
-        49.8%{ transform: translateX(-300%); } 
-        66.64% { transform: translateX(-400%); }
-        83.3%{ transform: translateX(-500%); }
-        100% {transform: translateX(-600%);}
+        14.2% { transform: translateX(-100%); }  
+        28.4% { transform: translateX(-200%); } 
+        42.6%{ transform: translateX(-300%); } 
+        56.8% { transform: translateX(-400%); }
+        71%{ transform: translateX(-500%); }
+        85% {transform: translateX(0%);}
          /* Transición suave al inicio */
     }
 #wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3 {
