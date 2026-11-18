@@ -1,0 +1,45 @@
+/* Estilos del carrusel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%; /* 100% * 3 imágenes */
+    animation: slide 13s infinite ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%; /* Se ajusta al contenedor */
+    height: 100%;
+    flex: 0 0 auto; /* 3 imágenes en un 100% */
+    object-fit: cover; /* Evita distorsión */
+    object-position: center;
+    filter: (5px);
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    16.66% { transform: translateX(-100%); }
+    33.32% { transform: translateX(-200%); }
+    49.8%{ transform: translateX(-300%); }
+    66.64% { transform: translateX(-400%); }
+    83.3%{ transform: translateX(-500%); }
+    100% {transform: translateX(-600%);} 
+         /* Transición suave al inicio */
+    }
+#wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3 {
+    margin: 0 auto;
+}
+li {
+    text-align: center;
+}
+ul li img {
+    width: 350px;
+}
