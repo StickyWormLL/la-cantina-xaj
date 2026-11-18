@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# CSS compilat amb Sass
+src/scss/main.css
+src/scss/main.css.map
