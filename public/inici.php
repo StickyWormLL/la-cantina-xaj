@@ -27,7 +27,4 @@
             </div>
         </div>
     </div>
-    <?php
-    echo "<p>Contingut generat amb PHP</p>";
-    ?>
     <?php include '../includes/footer.php'; ?>
