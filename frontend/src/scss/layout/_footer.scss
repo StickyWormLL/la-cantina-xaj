@@ -1,23 +1,69 @@
-@media (min-width: 1024px) {
-    footer {
-        display: grid;
-        grid-template-columns:repeat(8fr, 1fr);
-        grid-template-areas: 
-        "titfooter titfooter titfooter titfooter titfooter titfooter txtfooter txtfooter";
+@use '../abstracts/variables' as *;
+
+.footer {
+    background-color: $blanc;
+    border-top: 1px solid $vora;
+    font-size: 14px;
+    color: $text-gris;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+.footer__col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: $text;
+}
+
+.footer__logo {
+    width: 28px;
+}
+
+.footer__title {
+    margin: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $text;
+}
+
+.footer__address {
+    font-style: normal;
+}
+
+.footer__bottom {
+    padding-top: 16px;
+    padding-bottom: 28px;
+    border-top: 1px solid $vora;
+}
+
+.footer__links {
+    display: flex;
+    gap: 20px;
+
+    a {
+        font-weight: bold;
+        color: $verd;
+        text-decoration: none;
     }
 }
-@media (max-width: 1023px) {
-    footer {
-        display: grid;
-        grid-template-columns:repeat(1fr, 1fr);
-        grid-template-areas: 
-        "titfooter"
-        "txtfooter";
+
+@media (max-width: $mobil) {
+    .footer__grid {
+        grid-template-columns: 1fr;
     }
-}
-#titolfooter {
-    grid-area: titfooter;
-}
-#textfooter {
-    grid-area: txtfooter;
 }

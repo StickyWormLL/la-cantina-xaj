@@ -1,28 +1,92 @@
-@media (min-width: 1024px) {
-    header {
-        display: grid;
-        grid-template-columns:repeat(8,2fr);
-        grid-template-areas: 
-        "icona . . titol titol titol nav nav"
-        "text-ies text-ies . . . . . .";
+@use '../abstracts/variables' as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: $blanc;
+    border-bottom: 1px solid $vora;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $text;
+    text-decoration: none;
+}
+
+.logo__mark {
+    width: 44px;
+    height: 44px;
+}
+
+.logo__name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav,
+.nav__list,
+.nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: $text;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $gris;
     }
 }
-header {
-    background-color: #f5f5f5;
+
+.nav__actions .menu-toggle {
+    display: none;
 }
 
-#iconaCantina {
-    grid-area: icona;
-}
+@media (max-width: $mobil) {
+    .nav__list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        padding: 16px;
+        background-color: $blanc;
+        border-bottom: 1px solid $vora;
+    }
 
-#titolWeb {
-    grid-area: titol;
-}
+    .nav__list.is-open {
+        display: flex;
+    }
 
-#nomInstitut {
-    grid-area: text-ies;
-}
+    .nav__actions .menu-toggle {
+        display: flex;
+    }
 
-#connexions {
-    grid-area: nav;
+    .logo__name {
+        display: none;
+    }
 }

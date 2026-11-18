@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as *;
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: $text;
+    text-decoration: none;
+}
+
+// Botó rodó (tema, favorits, menú)
+.icon-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $vora;
+    border-radius: 50%;
+    background-color: $blanc;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $gris;
+    }
+}
