@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compra de productes</title>
+    <title>La Cantina - Inici</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
     <style href="/frontend/src/scss/main.css"></style>
     <script type="module" src="http://localhost:5173/@vite/client">
     </script>
@@ -31,59 +32,61 @@
         </div>
     </div>
     <div>
-    <h2>Ofertes del dia</h2>
-    <button>Veure tots els productes</button>
-    <div>
+        <h2>Ofertes del dia</h2>
+        <button>Veure tots els productes</button>
         <div>
-            <img>
-            <p></p>
-            <h4></h4>
-            <p></p>
-            <h3></h3>
-            <button></button>
-        </div>
-        <div>
-            <img>
-            <p></p>
-            <h4></h4>
-            <p></p>
-            <h3></h3>
-            <button></button>
-        </div>
-        <div>
-            <img>
-            <p></p>
-            <h4></h4>
-            <p></p>
-            <h3></h3>
-            <button></button>
-        </div>
-    </div>
-    </div>
-    <div>
-    <div>
-        <p>Sobre nosaltres</p>
-        <h2>La cantina del campus des de 2022</h2>
-        <p>Som l'equip que obre la barra abans de la primera classe i la tanca quan acaben les últimes pràctiques.</p>
-        <p>Cuinem aquí mateix: entrepans calents a la planxa, braves fetes al moment i brioixeria dolça i salada fornejada cada matí. Amb aquesta web deixes la comanda feta i la reculls sense fer cua.</p>
-    </div>
-    <div>
-        <h3>Com funciona</h3>
-        <div>
-            <img>
-            <p>1. Tria</p>
-            <p>Entrepans, patates, brioixeria i begudes, segons l'hora del dia.</p>
-        </div>
-        <div>
-            <img>
-            <p>2. Revisa el tiquet</p>
-            <p>Afegeix o treu unitats i mira el total actualitzat al moment.</p>
-        </div>
-        <div>
-            <img>
-            <p>3. Recull a la barra</p>
-            <p>Deixa nom, telèfon i correu i et guardem la comanda.</p>
+            <div>
+                <img>
+                <p></p>
+                <h4></h4>
+                <p></p>
+                <h3></h3>
+                <button></button>
+            </div>
+            <div>
+                <img>
+                <p></p>
+                <h4></h4>
+                <p></p>
+                <h3></h3>
+                <button></button>
+            </div>
+            <div>
+                <img>
+                <p></p>
+                <h4></h4>
+                <p></p>
+                <h3></h3>
+                <button></button>
+            </div>
         </div>
     </div>
+    <div>
+        <div>
+            <p>Sobre nosaltres</p>
+            <h2>La cantina del campus des de 2022</h2>
+            <p>Som l'equip que obre la barra abans de la primera classe i la tanca quan acaben les últimes pràctiques.
+            </p>
+            <p>Cuinem aquí mateix: entrepans calents a la planxa, braves fetes al moment i brioixeria dolça i salada
+                fornejada cada matí. Amb aquesta web deixes la comanda feta i la reculls sense fer cua.</p>
+        </div>
+        <div>
+            <h3>Com funciona</h3>
+            <div>
+                <img>
+                <p>1. Tria</p>
+                <p>Entrepans, patates, brioixeria i begudes, segons l'hora del dia.</p>
+            </div>
+            <div>
+                <img>
+                <p>2. Revisa el tiquet</p>
+                <p>Afegeix o treu unitats i mira el total actualitzat al moment.</p>
+            </div>
+            <div>
+                <img>
+                <p>3. Recull a la barra</p>
+                <p>Deixa nom, telèfon i correu i et guardem la comanda.</p>
+            </div>
+        </div>
     </div>
     <?php include '../includes/footer.php'; ?>
