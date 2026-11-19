@@ -11,7 +11,7 @@ Arnau:
     - solucionar redirecciones
     - funcion de carret (com l'activitat de js)
     - web compra php amb css implantat  
-    - inserció de imatges 
+    - inserció de imatges
 Joel:
     - ticket php css implantat
     - finalitzacio php css implantat
