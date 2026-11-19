@@ -26,3 +26,6 @@ dist-ssr
 # CSS compilat amb Sass
 src/scss/main.css
 src/scss/main.css.map
+
+frontend/src/scss/main.css.map
+frontend/src/scss/main.css
