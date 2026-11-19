@@ -24,5 +24,5 @@ dist-ssr
 *.sw?
 
 # CSS compilat amb Sass
-src/scss/main.css
-src/scss/main.css.map
+./src/scss/main.css
+./src/scss/main.css.map
