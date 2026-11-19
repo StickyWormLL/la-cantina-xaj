@@ -8,6 +8,19 @@
     border-radius: 10px;
     background-color: #f0f0f0;
 }
+#carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Lo centra exactamente en el medio */
+    z-index: 2; /* Asegura que esté por encima de las imágenes */
+    color: white;
+    text-align: center;
+    width: 85%; /* Evita que el texto toque los bordes del contenedor */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7); /* Sombra suave para mejorar la lectura */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+}
 
 .carousel-images {
     display: flex;
@@ -22,6 +35,7 @@
     object-fit: cover; /* Evita distorsión */
     object-position: center;
     filter: (5px);
+    filter: brightness(0.3);
 }
 
 @keyframes slide {
