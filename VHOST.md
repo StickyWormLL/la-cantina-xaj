@@ -13,13 +13,21 @@ Al final del archivo pega:
     ServerName la-cantina.local
     DocumentRoot "/opt/lampp/htdocs/la-cantina-xaj/public"
     DirectoryIndex inici.php index.php
+
     <Directory "/opt/lampp/htdocs/la-cantina-xaj/public">
         Options Indexes FollowSymLinks
         AllowOverride All
         Require all granted
     </Directory>
+
+    Alias /assets "/opt/lampp/htdocs/la-cantina-xaj/assets"
+    <Directory "/opt/lampp/htdocs/la-cantina-xaj/assets">
+        Require all granted
+    </Directory>
 </VirtualHost>
 ```
+
+> El `Alias /assets` es para que carguen las imagenes, porque la carpeta `assets` esta fuera de `public`
 
 Guardar: `Ctrl+O`, `Enter`, `Ctrl+X`
 
@@ -53,6 +61,17 @@ Añade esta línea al final:
 sudo /opt/lampp/lampp restart
 ```
 
-## 5 PROBAR
+## 5 ARRANCAR VITE (SI NO NO HAY ESTILOS)
+
+Los estilos los carga Vite, asi que tiene que estar encendido:
+
+```bash
+cd /opt/lampp/htdocs/la-cantina-xaj/frontend
+npm run dev
+```
+
+Deja esa terminal abierta mientras trabajas.
+
+## 6 PROBAR
 
 Abre el navegador <http://la-cantina.local>

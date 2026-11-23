@@ -1,5 +1,14 @@
 RewriteEngine On
 
+# /inici o /inici.php -> /
+RewriteCond %{THE_REQUEST} \s/+inici(\.php)?[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+# Si alguien entra con .php (ej: /compra.php) lo redirige a /compra
+RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# Si entras a /compra carga compra.php por dentro
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
