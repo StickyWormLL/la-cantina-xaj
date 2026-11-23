@@ -20,7 +20,7 @@
         <span class="footer__copy">&copy; La Cantina 2026</span>
         <div class="footer__links">
             <a href="condicions.php">Condicions i privacitat</a>
-            <a href="admin.php">Administració</a>
+            <a href="login.php">Administració</a>
         </div>
     </div>
 </footer>

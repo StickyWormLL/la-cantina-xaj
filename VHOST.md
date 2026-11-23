@@ -27,8 +27,6 @@ Al final del archivo pega:
 </VirtualHost>
 ```
 
-> El `Alias /assets` es para que carguen las imagenes, porque la carpeta `assets` esta fuera de `public`
-
 Guardar: `Ctrl+O`, `Enter`, `Ctrl+X`
 
 ## 2 ACTIVAR EL VHOST

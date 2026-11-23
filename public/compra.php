@@ -1,3 +1,23 @@
+<?php
+session_start();
+require_once '../logic/funcions.php';
+
+// Quan es prem "Afegeix al carret" s'envia l'id del producte
+if (isset($_POST['id'])) {
+    afegirAlCarret($_POST['id']);
+    header("Location: compra.php");
+    exit();
+}
+
+// Quan es prem el cor s'afegeix o es treu de favorits
+if (isset($_POST['favorit'])) {
+    canviarFavorit($_POST['favorit']);
+    header("Location: compra.php");
+    exit();
+}
+
+$llistaProductes = carregarProductes();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,36 +34,37 @@
 </head>
 
 <body>
-    <?php
-    include '../includes/header.php';
-    require_once '../logic/funcions.php';
-    $llistaProductes = carregarProductes();
-    ?>
+    <?php include '../includes/header.php'; ?>
 
-    <h1 class="titolPagina">Tots els nostres productes:</h1>
+    <div class="container">
+        <h1 class="titolPagina">Tots els nostres productes:</h1>
 
-    <section class="catalegProductes">
+        <section class="catalegProductes">
 
-        <?php foreach ($llistaProductes as $producte): ?>
-            <article class="card-producte">
-                <h3 class="nom-producte"><?= $producte['nom'] ?></h3>
-                <img class="img-producte" src="<?= $producte['img'] ?>">
-                <p class="preu-producte">Preu: <?= $producte['preu'] ?> euros</p>
-                <button class="btn-afegirCarret">Afegeix al carret</button>
-            </article>
-        <?php endforeach; ?>
+            <?php foreach ($llistaProductes as $producte): ?>
+                <article class="card-producte">
+                    <h3 class="nom-producte"><?= $producte['nom'] ?></h3>
+                    <img class="img-producte" src="<?= $producte['img'] ?>">
+                    <p class="preu-producte">Preu: <?= $producte['preu'] ?> euros</p>
+                    <div class="botons-producte">
+                        <form method="post" action="">
+                            <input type="hidden" name="id" value="<?= $producte['id'] ?>">
+                            <button type="submit" class="btn-afegirCarret">Afegeix al carret</button>
+                        </form>
+                        <form method="post" action="">
+                            <input type="hidden" name="favorit" value="<?= $producte['id'] ?>">
+                            <button type="submit" class="btn-favorit">
+                                <?php if (esFavorit($producte['id'])): ?>
+                                    <img src="../assets/img/icons/favorite-fill.svg" alt="Treure de favorits">
+                                <?php else: ?>
+                                    <img src="../assets/img/icons/favorite.svg" alt="Afegir a favorits">
+                                <?php endif; ?>
+                            </button>
+                        </form>
+                    </div>
+                </article>
+            <?php endforeach; ?>
 
-    </section>
-    
-    <section class="carretProductes">
-            <p>El teu carret:</p>
-            <ul>
-
-            </ul>
-
-    </section>
-    <?php 
-        $raw = file_get_contents("php://input")
-        // $carret = json_decode($raw, true)
-        ?>
+        </section>
+    </div>
     <?php include '../includes/footer.php'; ?>
