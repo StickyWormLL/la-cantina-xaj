@@ -27,15 +27,15 @@
                 <img src="../assets/img/products/carrousel_bocadillo_jamon.jpg" alt="Imagen 7">
             </div>
             <div id="carousel-text">
-                <p>Esmorzar, dinar i berenar sense fer cua.</p>
+                <p><b>Esmorzar, dinar i berenar sense fer cua.</b></p>
             </div>
         </div>
     </div>
     <div>
-        <h2>Ofertes del dia</h2>
-        <button>Veure tots els productes</button>
+        <h2 id="ofertes_dia_tit">Ofertes del dia</h2>
+        <button id="veureproductes">Veure tots els productes</button>
         <div>
-            <div>
+            <div id="product1">
                 <img>
                 <p></p>
                 <h4></h4>
@@ -43,7 +43,7 @@
                 <h3></h3>
                 <button></button>
             </div>
-            <div>
+            <div id="product2">
                 <img>
                 <p></p>
                 <h4></h4>
@@ -51,7 +51,7 @@
                 <h3></h3>
                 <button></button>
             </div>
-            <div>
+            <div id="product3">
                 <img>
                 <p></p>
                 <h4></h4>

@@ -1,3 +1,24 @@
+@media (min-width: 1024px){
+    body{
+    display:grid;
+    grid-column: 12, 4fr;
+    grid-template-areas:
+    "tit-oferta tit-orferta . . . . . . . . button-tit button-tit"
+    "product1 product1 product1 product2 product2 product2 product3 product3 product3"
+    "product1 product1 product1 product2 product2 product2 product3 product3 product3"
+    "product1 product1 product1 product2 product2 product2 product3 product3 product3";
+    }
+
+}
+#ofertes_dia_tit{
+    grid-area: tit-orferta;
+}
+#veureproductes{
+    grid-area:button-tit;
+}
+#product1{
+    grid-area:product1;
+}
 /* Estilos del carrusel */
 .carousel-container {
     position: relative;
@@ -24,8 +45,8 @@
 
 .carousel-images {
     display: flex;
-    width: 100%; /* 100% * 3 imágenes */
-    animation: slide 13s infinite ease-in-out;
+    width: 100%;
+    animation: slide 24s infinite ease-in-out;
 }
 
 .carousel-images img {
@@ -39,15 +60,27 @@
 }
 
 @keyframes slide {
-    0% { transform: translateX(0); }
-    16.66% { transform: translateX(-100%); }
-    33.32% { transform: translateX(-200%); }
-    49.8%{ transform: translateX(-300%); }
-    66.64% { transform: translateX(-400%); }
-    83.3%{ transform: translateX(-500%); }
-    100% {transform: translateX(-600%);} 
-         /* Transición suave al inicio */
-    }
+    /* Foto 1: quieta 2s (0% a 8.33%) */
+    0%, 8.33% { transform: translateX(0); }
+    
+    /* Foto 2: desliza 2s y quieta 2s (16.66% a 25%) */
+    16.66%, 25% { transform: translateX(-100%); }
+    
+    /* Foto 3: desliza 2s y quieta 2s (33.33% a 41.66%) */
+    33.33%, 41.66% { transform: translateX(-200%); }
+    
+    /* Foto 4: desliza 2s y quieta 2s (50% a 58.33%) */
+    50%, 58.33% { transform: translateX(-300%); }
+    
+    /* Foto 5: desliza 2s y quieta 2s (66.66% a 75%) */
+    66.66%, 75% { transform: translateX(-400%); }
+    
+    /* Foto 6: desliza 2s y quieta 2s (83.33% a 91.66%) */
+    83.33%, 91.66% { transform: translateX(-500%); }
+    
+    /* Clon Foto 1: desliza 2s hasta el final */
+    100% { transform: translateX(-600%); }
+}
 #wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3 {
     margin: 0 auto;
 }
