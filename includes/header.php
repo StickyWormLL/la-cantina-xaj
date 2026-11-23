@@ -17,7 +17,9 @@
                         alt="Dark" /></button>
                 <a href="favorits.php" class="icon-btn"><img src="../assets/img/icons/favorite.svg"
                         alt="Favorits" /></a>
-                <a href="compra.php" class="btn">Tiquet 0</a>
+                <a href="compra.php" class="btn">
+                    <img src="../assets/img/icons/shopping_bag.svg" alt="Shooping" />Tiquet 0
+                </a>
                 <button class="icon-btn menu-toggle" id="menu-toggle">Menu</button>
             </div>
         </nav>

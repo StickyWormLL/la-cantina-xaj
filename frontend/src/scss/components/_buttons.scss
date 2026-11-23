@@ -1,12 +1,19 @@
 @use '../abstracts/variables' as *;
 
 .btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
     padding: 10px 16px;
+    border: 1px solid $vora;
     border-radius: 20px;
     font-size: 14px;
     font-weight: bold;
     color: $text;
     text-decoration: none;
+    background-color: $verd;
+    color: $blanc;
+    cursor: pointer;
 }
 
 // Botó rodó (tema, favorits, menú)

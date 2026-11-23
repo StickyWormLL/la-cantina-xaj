@@ -5,7 +5,6 @@
                 <img src="../assets/img/logos/logo-simbol.svg" class="footer__logo" alt="" />
                 Cantina JAX
             </span>
-            <span>La cantina del campus.</span>
         </div>
         <div class="footer__col">
             <h2 class="footer__title">Grup de treball</h2>
