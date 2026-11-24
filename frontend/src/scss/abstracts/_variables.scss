@@ -1,17 +1,34 @@
-$verd: #1F6B4A;
-$blanc: #FFFFFF;
-$gris: #E9EEEA;
-$vora: #D6DED9;
-$text: #18211D;
-$text-gris: #55615B;
+// Altres colors
+$color-vora: #D6DED9;
+$color-text-suau: #55615B;
 
-$fons: #648747;
+$fons-pagina: #648747;
 
+// Tipografia
+$font-principal: Arial, Helvetica, sans-serif;
 
-$verd-clar: rgb(131, 175, 95);
-$verd-fosc: rgb(113, 152, 82);
-$blat: wheat;
+// Mides de text
+$mida-petita: 14px;
+$mida-normal: 16px;
+$mida-mitjana: 18px;
+$mida-gran: 22px;
+$mida-titol: 28px;
 
+// Mides de pantalla
 $tablet: 1024px;
 $mobil: 768px;
 $mobil-petit: 480px;
+
+// Colors
+$verd-principal: #1F6B4A;
+$blanc: #FFFFFF;
+$gris-clar: #E9EEEA;
+$color-text: #18211D;
+
+$verd-boto: rgb(131, 175, 95);
+$verd-boto-hover: rgb(113, 152, 82);
+$color-titol: wheat;
+
+$fons-compra: #F1F7F3;
+$fons-imatge: #D3E6DA;
+$vora-targeta: #B9D4C3;
