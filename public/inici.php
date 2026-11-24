@@ -32,15 +32,16 @@
         </div>
     </div>
     <div>
-        <h2 id="ofertes_dia_tit">Ofertes del dia</h2>
-        <button id="veureproductes">Veure tots els productes</button>
-        <div>
-            <div id="product1">
-                <img>
-                <p></p>
-                <h4></h4>
-                <p></p>
-                <h3></h3>
+    <?php echo date("d/m") ?>
+    <h2 id="ofertes_dia_tit">Ofertes del dia</h2>
+    <button id="veureproductes">Veure tots els productes</button>
+    <div>
+        <div id="product1">
+            <img>
+                <p>2%</p>
+                <h4>Entrepà de Llom</h4>
+                <p>Rebaixes en entrepans de llom</p>
+                <h3>2.94€<del>3€</del></h3>
                 <button></button>
             </div>
             <div id="product2">
