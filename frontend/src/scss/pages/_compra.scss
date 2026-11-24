@@ -1,45 +1,97 @@
-body {
-    
-}
+@use '../abstracts/variables' as *;
 
 .catalegProductes {
     display: grid;
-    padding: 20px;
-    margin: 20px;
-    place-items: center;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 20px 0 40px;
 
-    
-    .nom-producte {
-        color:wheat;
-        font-size: 24px;
-         
-        
+    @media (max-width: $tablet) {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .preu-producte {
-        color:wheat;
-        font-size: 16px;
+    @media (max-width: $mobil) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
-    .img-producte {
-        display: flex;
-        height: auto;
-        padding: -10px;
-        margin: -10px;
-        background-color: rgb(131, 175, 95);
-        border-color: rgb(131, 175, 95);
-        border-radius: 10px;
-    }
-
-    .btn-afegirCarret {
-        cursor: pointer;
-        background-color: rgb(131, 175, 95);
-        border-radius: 10px;
-        border-color: rgb(113, 152, 82);
-        font-size: 16px;
+    @media (max-width: $mobil-petit) {
+        grid-template-columns: 1fr;
     }
 }
 
+.card-producte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .nom-producte {
+        margin: 0 0 10px;
+        color: $blat;
+        font-size: 22px;
+    }
+
+    .img-producte {
+        width: 100%;
+        max-width: 256px;
+        margin-top: auto;
+        background-color: $verd-clar;
+        border-radius: 10px;
+    }
+
+    .preu-producte {
+        color: $blat;
+        font-size: 16px;
+    }
+
+    .botons-producte {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    @media (max-width: $mobil) {
+        .nom-producte {
+            font-size: 18px;
+        }
+    }
+}
+
+.btn-afegirCarret {
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 16px;
+    color: $text;
+    text-decoration: none;
+    background-color: $verd-clar;
+    border: 1px solid $verd-fosc;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $gris;
+    }
+}
+
+.btn-favorit {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    color: $text;
+    align-items: center;
+    justify-content: center;
+    background-color: $verd-clar;
+    border: 1px solid $verd-fosc;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $gris;
+    }
+}
+
+.favorits-buit {
+    color: $blat;
+    font-size: 18px;
+}

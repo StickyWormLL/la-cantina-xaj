@@ -1,0 +1,89 @@
+@use '../abstracts/variables' as *;
+
+.carret {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    color: $blanc;
+
+    .carret-buit {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .llista-carret {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .item-carret {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid rgb(131, 175, 95);
+    }
+
+    .img-carret {
+        width: 60px;
+        height: 60px;
+        background-color: rgb(131, 175, 95);
+        border-radius: 10px;
+    }
+
+    .nom-carret {
+        flex: 1;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .quantitat-carret {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .preu-carret {
+        width: 100px;
+        text-align: right;
+    }
+
+    .total-carret {
+        margin-top: 20px;
+        font-size: 22px;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    .botons-carret {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .btn-carret {
+        display: inline-block;
+        padding: 8px 14px;
+        cursor: pointer;
+        background-color: rgb(131, 175, 95);
+        border: 1px solid rgb(113, 152, 82);
+        border-radius: 10px;
+        font-size: 16px;
+        color: $text;
+        text-decoration: none;
+
+        &:hover {
+            background-color: rgb(113, 152, 82);
+        }
+    }
+}
+
+@media (max-width: $mobil) {
+    .carret .item-carret {
+        flex-wrap: wrap;
+    }
+}

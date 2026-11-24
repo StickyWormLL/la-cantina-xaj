@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as *;
+
+.admin {
+    max-width: 500px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    color: $blanc;
+
+    .admin-text {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .form-admin {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .camp-admin {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-weight: bold;
+
+        input {
+            padding: 8px 10px;
+            border: 1px solid rgb(113, 152, 82);
+            border-radius: 10px;
+            font-size: 16px;
+        }
+    }
+
+    .check-admin {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .botons-admin {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .btn-admin {
+        display: inline-block;
+        padding: 8px 14px;
+        cursor: pointer;
+        background-color: rgb(131, 175, 95);
+        border: 1px solid rgb(113, 152, 82);
+        border-radius: 10px;
+        font-size: 16px;
+        color: $text;
+        text-decoration: none;
+
+        &:hover {
+            background-color: rgb(113, 152, 82);
+        }
+    }
+
+    .admin-demo {
+        margin-top: 20px;
+        font-size: 14px;
+        color: $gris;
+    }
+}
