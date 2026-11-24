@@ -33,7 +33,7 @@ $llistaProductes = carregarProductes();
     </script>
 </head>
 
-<body>
+<body class="pagina-compra">
     <?php include '../includes/header.php'; ?>
 
     <div class="container">
@@ -43,9 +43,9 @@ $llistaProductes = carregarProductes();
 
             <?php foreach ($llistaProductes as $producte): ?>
                 <article class="card-producte">
+                    <img class="img-producte" src="<?= $producte['img'] ?>" alt="<?= $producte['nom'] ?>">
                     <h3 class="nom-producte"><?= $producte['nom'] ?></h3>
-                    <img class="img-producte" src="<?= $producte['img'] ?>">
-                    <p class="preu-producte">Preu: <?= $producte['preu'] ?> euros</p>
+                    <p class="preu-producte"><?= number_format($producte['preu'], 2) ?> €</p>
                     <div class="botons-producte">
                         <form method="post" action="">
                             <input type="hidden" name="id" value="<?= $producte['id'] ?>">
