@@ -153,6 +153,20 @@ function eliminarProducte($id)
     guardarProductes($productes);
 }
 
+/*
+    OFERTES DEL DIA
+    ES TRIEN 3 PRODUCTES A L'ATZAR, PERÒ SEMPRE ELS MATEIXOS DURANT TOT EL DIA
+*/
+
+function ofertesDelDia()
+{
+    $productes = carregarProductes();
+    srand((int) date('Ymd'));
+    shuffle($productes);
+    srand();
+    return array_slice($productes, 0, 3);
+}
+
 // USUARIS
 function carregarUsuaris()
 {
