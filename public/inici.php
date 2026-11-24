@@ -48,8 +48,8 @@ $ofertes = ofertesDelDia();
     <div class="container">
         <section class="ofertes">
             <div class="cap-ofertes">
-                <h2 id="ofertes_dia_tit" class="titol-inici">Ofertes del dia</h2>
-                <a href="compra.php" id="veureproductes" class="btn-inici">Veure tots els productes</a>
+                <h2 id="ofertes_dia_tit" class="titolPagina">Ofertes del dia</h2>
+                <a href="compra.php" id="veureproductes" class="btn-default">Veure tots els productes</a>
             </div>
 
             <div class="llista-ofertes">
@@ -63,7 +63,7 @@ $ofertes = ofertesDelDia();
                         </p>
                         <form method="post" action="">
                             <input type="hidden" name="id" value="<?= $producte['id'] ?>">
-                            <button type="submit" class="btn-afegirCarret">Afegeix al carret</button>
+                            <button type="submit" class="btn-default">Afegeix al carret</button>
                         </form>
                     </article>
                 <?php endforeach; ?>
@@ -77,7 +77,7 @@ $ofertes = ofertesDelDia();
                     pràctiques.</p>
                 <p>Cuinem aquí mateix: entrepans calents a la planxa, braves fetes al moment i brioixeria dolça i
                     salada fornejada cada matí. Amb aquesta web deixes la comanda feta i la reculls sense fer cua.</p>
-                <a href="compra.php" class="btn-inici">Fer una comanda</a>
+                <a href="compra.php" class="btn-default">Fer una comanda</a>
             </div>
 
             <div class="passos">

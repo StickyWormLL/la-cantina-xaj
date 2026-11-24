@@ -61,7 +61,7 @@ $llistaProductes = carregarProductes();
                     <input type="text" name="img" placeholder="cafe.png">
                 </label>
 
-                <button type="submit" name="accio" value="afegir" class="btn-panell">Afegir</button>
+                <button type="submit" name="accio" value="afegir" class="btn-default">Afegir</button>
             </form>
 
             <h2 class="titol-panell">Productes (<?= count($llistaProductes) ?>)</h2>
@@ -75,12 +75,12 @@ $llistaProductes = carregarProductes();
                         <form method="post" action="" class="preu-panell">
                             <input type="hidden" name="id" value="<?= $producte['id'] ?>">
                             <input type="number" name="preu" step="0.05" min="0.05" value="<?= $producte['preu'] ?>">
-                            <button type="submit" name="accio" value="preu" class="btn-panell">Guardar</button>
+                            <button type="submit" name="accio" value="preu" class="btn-default">Guardar</button>
                         </form>
 
                         <form method="post" action="">
                             <input type="hidden" name="id" value="<?= $producte['id'] ?>">
-                            <button type="submit" name="accio" value="eliminar" class="btn-panell">Eliminar</button>
+                            <button type="submit" name="accio" value="eliminar" class="btn-default">Eliminar</button>
                         </form>
                     </li>
                 <?php endforeach; ?>

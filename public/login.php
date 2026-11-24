@@ -69,8 +69,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </label>
 
                 <div class="botons-admin">
-                    <a href="inici.php" class="btn-admin">Tornar a la botiga</a>
-                    <button type="submit" class="btn-admin">Entrar</button>
+                    <a href="inici.php" class="btn-default">Tornar a la botiga</a>
+                    <button type="submit" class="btn-default">Entrar</button>
                 </div>
             </form>
 
