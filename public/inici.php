@@ -1,5 +1,18 @@
+<?php
+session_start();
+require_once '../logic/funcions.php';
+
+// Quan es prem "Afegeix al carret" en una oferta
+if (isset($_POST['id'])) {
+    afegirAlCarret($_POST['id']);
+    header("Location: inici.php");
+    exit();
+}
+
+$ofertes = ofertesDelDia();
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
@@ -31,63 +44,66 @@
             </div>
         </div>
     </div>
-    <div>
-    <?php echo date("d/m") ?>
-    <h2 id="ofertes_dia_tit">Ofertes del dia</h2>
-    <button id="veureproductes">Veure tots els productes</button>
-    <div>
-        <div id="product1">
-            <img>
-                <p>2%</p>
-                <h4>Entrepà de Llom</h4>
-                <p>Rebaixes en entrepans de llom</p>
-                <h3>2.94€<del>3€</del></h3>
-                <button></button>
+
+    <div class="container">
+        <section class="ofertes">
+            <div class="cap-ofertes">
+                <h2 id="ofertes_dia_tit" class="titol-inici">Ofertes del dia</h2>
+                <a href="compra.php" id="veureproductes" class="btn-inici">Veure tots els productes</a>
             </div>
-            <div id="product2">
-                <img>
-                <p></p>
-                <h4></h4>
-                <p></p>
-                <h3></h3>
-                <button></button>
+
+            <div class="llista-ofertes">
+                <?php foreach ($ofertes as $i => $producte): ?>
+                    <article id="product<?= $i + 1 ?>" class="card-producte">
+                        <h3 class="nom-producte"><?= $producte['nom'] ?></h3>
+                        <img class="img-producte" src="<?= $producte['img'] ?>" alt="<?= $producte['nom'] ?>">
+                        <p class="preu-producte">
+                            <span class="preu-antic"><?= number_format($producte['preu'], 2) ?> euros</span>
+                            <span class="preu-oferta"><?= number_format($producte['preu'] * 0.8, 2) ?> euros</span>
+                        </p>
+                        <form method="post" action="">
+                            <input type="hidden" name="id" value="<?= $producte['id'] ?>">
+                            <button type="submit" class="btn-afegirCarret">Afegeix al carret</button>
+                        </form>
+                    </article>
+                <?php endforeach; ?>
             </div>
-            <div id="product3">
-                <img>
-                <p></p>
-                <h4></h4>
-                <p></p>
-                <h3></h3>
-                <button></button>
+        </section>
+
+        <section class="nosaltres">
+            <div class="text-nosaltres">
+                <h2 class="titol-inici titol-nosaltres">La cantina del campus des de 2022</h2>
+                <p>Som l'equip que obre la barra abans de la primera classe i la tanca quan acaben les últimes
+                    pràctiques.</p>
+                <p>Cuinem aquí mateix: entrepans calents a la planxa, braves fetes al moment i brioixeria dolça i
+                    salada fornejada cada matí. Amb aquesta web deixes la comanda feta i la reculls sense fer cua.</p>
+                <a href="compra.php" class="btn-inici">Fer una comanda</a>
             </div>
-        </div>
-    </div>
-    <div>
-        <div>
-            <p>Sobre nosaltres</p>
-            <h2>La cantina del campus des de 2022</h2>
-            <p>Som l'equip que obre la barra abans de la primera classe i la tanca quan acaben les últimes pràctiques.
-            </p>
-            <p>Cuinem aquí mateix: entrepans calents a la planxa, braves fetes al moment i brioixeria dolça i salada
-                fornejada cada matí. Amb aquesta web deixes la comanda feta i la reculls sense fer cua.</p>
-        </div>
-        <div>
-            <h3>Com funciona</h3>
-            <div>
-                <img>
-                <p>1. Tria</p>
-                <p>Entrepans, patates, brioixeria i begudes, segons l'hora del dia.</p>
+
+            <div class="passos">
+                <h3 class="titol-passos">Com funciona</h3>
+                <div class="pas">
+                    <span class="num-pas">1</span>
+                    <div>
+                        <p class="nom-pas">Tria</p>
+                        <p>Entrepans, patates, brioixeria i begudes, segons l'hora del dia.</p>
+                    </div>
+                </div>
+                <div class="pas">
+                    <span class="num-pas">2</span>
+                    <div>
+                        <p class="nom-pas">Revisa el tiquet</p>
+                        <p>Afegeix o treu unitats i mira el total actualitzat al moment.</p>
+                    </div>
+                </div>
+                <div class="pas">
+                    <span class="num-pas">3</span>
+                    <div>
+                        <p class="nom-pas">Recull a la barra</p>
+                        <p>Deixa nom, telèfon i correu i et guardem la comanda.</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img>
-                <p>2. Revisa el tiquet</p>
-                <p>Afegeix o treu unitats i mira el total actualitzat al moment.</p>
-            </div>
-            <div>
-                <img>
-                <p>3. Recull a la barra</p>
-                <p>Deixa nom, telèfon i correu i et guardem la comanda.</p>
-            </div>
-        </div>
+        </section>
     </div>
     <?php include '../includes/footer.php'; ?>
