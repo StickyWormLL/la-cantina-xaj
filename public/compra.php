@@ -49,7 +49,7 @@ $llistaProductes = carregarProductes();
                     <div class="botons-producte">
                         <form method="post" action="">
                             <input type="hidden" name="id" value="<?= $producte['id'] ?>">
-                            <button type="submit" class="btn-afegirCarret">Afegeix al carret</button>
+                            <button type="submit" class="btn-default">Afegeix al carret</button>
                         </form>
                         <form method="post" action="">
                             <input type="hidden" name="favorit" value="<?= $producte['id'] ?>">

@@ -98,11 +98,7 @@
 
 .pagina-compra {
 
-    .titolPagina {
-        margin: 30px 0 10px;
-        color: $verd-principal;
-        font-size: $mida-titol;
-    }
+
 
     .card-producte {
         overflow: hidden;
@@ -147,21 +143,7 @@
         }
     }
 
-    .btn-afegirCarret {
-        width: 100%;
-        padding: 10px 16px;
-        border: 1px solid $verd-principal;
-        border-radius: 20px;
-        font-size: $mida-petita;
-        font-weight: bold;
-        color: $blanc;
-        background-color: $verd-principal;
 
-        &:hover {
-            background-color: $color-text;
-            border-color: $color-text;
-        }
-    }
 
     .btn-favorit {
         width: 40px;

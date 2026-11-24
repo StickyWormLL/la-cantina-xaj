@@ -46,7 +46,7 @@ $total = 0;
 
             <?php if (empty($carret)): ?>
                 <p class="carret-buit">El carret està buit.</p>
-                <a href="compra.php" class="btn-carret">Anar a comprar</a>
+                <a href="compra.php" class="btn-default">Anar a comprar</a>
             <?php else: ?>
 
                 <ul class="llista-carret">
@@ -62,16 +62,16 @@ $total = 0;
 
                             <form method="post" action="" class="quantitat-carret">
                                 <input type="hidden" name="id" value="<?= $id ?>">
-                                <button type="submit" name="accio" value="restar" class="btn-carret">-</button>
+                                <button type="submit" name="accio" value="restar" class="btn-default">-</button>
                                 <span><?= $quantitat ?></span>
-                                <button type="submit" name="accio" value="sumar" class="btn-carret">+</button>
+                                <button type="submit" name="accio" value="sumar" class="btn-default">+</button>
                             </form>
 
                             <span class="preu-carret"><?= number_format($subtotal, 2) ?> euros</span>
 
                             <form method="post" action="">
                                 <input type="hidden" name="id" value="<?= $id ?>">
-                                <button type="submit" name="accio" value="treure" class="btn-carret">Treure</button>
+                                <button type="submit" name="accio" value="treure" class="btn-default">Treure</button>
                             </form>
                         </li>
                     <?php endforeach; ?>
@@ -80,11 +80,11 @@ $total = 0;
                 <p class="total-carret">Total: <?= number_format($total, 2) ?> euros</p>
 
                 <div class="botons-carret">
-                    <a href="compra.php" class="btn-carret">Seguir comprant</a>
+                    <a href="compra.php" class="btn-default">Seguir comprant</a>
                     <form method="post" action="">
-                        <button type="submit" name="accio" value="buidar" class="btn-carret">Buidar carret</button>
+                        <button type="submit" name="accio" value="buidar" class="btn-default">Buidar carret</button>
                     </form>
-                    <a href="finalitzacio.php" class="btn-carret">Finalitzar compra</a>
+                    <a href="finalitzacio.php" class="btn-default">Finalitzar compra</a>
                 </div>
 
             <?php endif; ?>

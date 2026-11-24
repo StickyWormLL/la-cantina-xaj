@@ -32,3 +32,18 @@
         background-color: $gris-clar;
     }
 }
+.btn-default {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid $verd-principal;
+    border-radius: 20px;
+    font-size: $mida-petita;
+    font-weight: bold;
+    color: $blanc;
+    background-color: $verd-principal;
+    text-decoration: none;
+    &:hover {
+        background-color: $color-text;
+        border-color: $color-text;
+    }
+}
