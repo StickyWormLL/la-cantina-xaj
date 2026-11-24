@@ -97,4 +97,12 @@ function carregarFavorits() {
     return $favorits;
 }
 
+
+// USUARIS
+
+function carregarUsuaris() {
+    $JsonUsuaris = file_get_contents("../data/users.json");
+    $usuaris = json_decode($JsonUsuaris, true);
+    return $usuaris['users'];
+}
 ?>

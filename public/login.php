@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Cantina - Administració</title>
+    <title>La Cantina - Login</title>
     <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
     <style href="/frontend/src/scss/main.css"></style>
     <script type="module" src="http://localhost:5173/@vite/client">
@@ -17,12 +17,12 @@
     <?php include '../includes/header.php'; ?>
 
     <div class="container">
-        <h1 class="titolPagina">Accés d'administració</h1>
+        <h1 class="titolPagina">Accés al sistema</h1>
 
         <section class="admin">
             <p class="admin-text">Només per al personal de la cantina.</p>
 
-            <form method="post" action="" class="form-admin">
+            <form method="POST" action="" class="form-admin">
                 <label class="camp-admin">Usuari
                     <input type="text" name="usuari" autocomplete="username" required>
                 </label>
