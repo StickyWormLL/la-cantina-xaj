@@ -1,6 +1,7 @@
 <?php
 
-function carregarProductes() {
+function carregarProductes()
+{
     $JsonProductes = file_get_contents("../data/productes.json");
     $productes = json_decode($JsonProductes, true);
     return $productes;
@@ -18,7 +19,8 @@ function carregarProductes() {
     CAL FER session_start() ABANS DE FER SERVIR AQUESTES FUNCIONS
 */
 
-function buscarProducte($id) {
+function buscarProducte($id)
+{
     $productes = carregarProductes();
     foreach ($productes as $producte) {
         if ($producte['id'] == $id) {
@@ -28,7 +30,8 @@ function buscarProducte($id) {
     return null;
 }
 
-function afegirAlCarret($id) {
+function afegirAlCarret($id)
+{
     if (buscarProducte($id) == null) {
         return;
     }
@@ -38,7 +41,8 @@ function afegirAlCarret($id) {
     $_SESSION['carret'][$id]++;
 }
 
-function treureUnDelCarret($id) {
+function treureUnDelCarret($id)
+{
     if (!isset($_SESSION['carret'][$id])) {
         return;
     }
@@ -48,15 +52,18 @@ function treureUnDelCarret($id) {
     }
 }
 
-function eliminarDelCarret($id) {
+function eliminarDelCarret($id)
+{
     unset($_SESSION['carret'][$id]);
 }
 
-function buidarCarret() {
+function buidarCarret()
+{
     $_SESSION['carret'] = [];
 }
 
-function quantitatCarret() {
+function quantitatCarret()
+{
     if (!isset($_SESSION['carret'])) {
         return 0;
     }
@@ -68,12 +75,14 @@ function quantitatCarret() {
     ES GUARDEN A LA SESSIÓ COM UNA LLISTA D'IDS: $_SESSION['favorits'] = [1, 4, 7...]
 */
 
-function esFavorit($id) {
+function esFavorit($id)
+{
     return in_array($id, $_SESSION['favorits'] ?? []);
 }
 
 // Si ja és favorit el treu, si no ho és l'afegeix
-function canviarFavorit($id) {
+function canviarFavorit($id)
+{
     if (buscarProducte($id) == null) {
         return;
     }
@@ -87,7 +96,8 @@ function canviarFavorit($id) {
     }
 }
 
-function carregarFavorits() {
+function carregarFavorits()
+{
     $favorits = [];
     foreach (carregarProductes() as $producte) {
         if (esFavorit($producte['id'])) {
@@ -97,12 +107,14 @@ function carregarFavorits() {
     return $favorits;
 }
 
-function guardarProductes($productes) {
+function guardarProductes($productes)
+{
     $json = json_encode(array_values($productes), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     file_put_contents("../data/productes.json", $json);
 }
 
-function afegirProducte($nom, $preu, $img) {
+function afegirProducte($nom, $preu, $img)
+{
     $productes = carregarProductes();
     $nouId = 1;
     foreach ($productes as $producte) {
@@ -119,7 +131,8 @@ function afegirProducte($nom, $preu, $img) {
     guardarProductes($productes);
 }
 
-function canviarPreu($id, $preu) {
+function canviarPreu($id, $preu)
+{
     $productes = carregarProductes();
     foreach ($productes as $i => $producte) {
         if ($producte['id'] == $id) {
@@ -129,7 +142,8 @@ function canviarPreu($id, $preu) {
     guardarProductes($productes);
 }
 
-function eliminarProducte($id) {
+function eliminarProducte($id)
+{
     $productes = carregarProductes();
     foreach ($productes as $i => $producte) {
         if ($producte['id'] == $id) {
