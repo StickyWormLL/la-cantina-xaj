@@ -1,3 +1,11 @@
+<?php
+// El header mostra quants productes hi ha al carret
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+require_once __DIR__ . '/../logic/funcions.php';
+?>
+
 <header class="header">
     <div class="container header__inner">
         <a href="inici.php" class="logo">
@@ -17,8 +25,8 @@
                         alt="Dark" /></button>
                 <a href="favorits.php" class="icon-btn"><img src="../assets/img/icons/favorite.svg"
                         alt="Favorits" /></a>
-                <a href="compra.php" class="btn">
-                    <img src="../assets/img/icons/shopping_bag.svg" alt="Shooping" />Tiquet 0
+                <a href="carrito.php" class="btn">
+                    <img src="../assets/img/icons/shopping_bag.svg" alt="Shooping" />Tiquet <?= quantitatCarret() ?>
                 </a>
                 <button class="icon-btn menu-toggle" id="menu-toggle">Menu</button>
             </div>
