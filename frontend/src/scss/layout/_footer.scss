@@ -2,9 +2,9 @@
 
 .footer {
     background-color: $blanc;
-    border-top: 1px solid $vora;
+    border-top: 1px solid $color-vora;
     font-size: 14px;
-    color: $text-gris;
+    color: $color-text;
 }
 
 .footer__grid {
@@ -27,7 +27,7 @@
     gap: 10px;
     font-size: 20px;
     font-weight: bold;
-    color: $text;
+    color: $color-text;
 }
 
 .footer__logo {
@@ -38,7 +38,7 @@
     margin: 0;
     font-size: 14px;
     text-transform: uppercase;
-    color: $text;
+    color: $color-text;
 }
 
 .footer__address {
@@ -52,7 +52,7 @@
     gap: 16px;
     padding-top: 16px;
     padding-bottom: 28px;
-    border-top: 1px solid $vora;
+    border-top: 1px solid $color-vora;
 }
 
 .footer__links {
@@ -61,7 +61,7 @@
 
     a {
         font-weight: bold;
-        color: $verd;
+        color: $verd-principal;
         text-decoration: none;
     }
 }

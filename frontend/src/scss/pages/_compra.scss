@@ -97,8 +97,6 @@
 }
 
 .pagina-compra {
-    background-color: $fons-compra;
-    font-family: $font-principal;
 
     .titolPagina {
         margin: 30px 0 10px;
@@ -172,7 +170,7 @@
         border: 1px solid $vora-targeta;
 
         &:hover {
-            background-color: $fons-compra;
+            background-color: $verd-boto-hover;
         }
     }
 }

@@ -68,7 +68,7 @@
   {
     "id": 12,
     "nom": "Galetes Dinosaurus",
-    "preu": 1.50,
+    "preu": 3.50,
     "img": "../assets/img/products/dinosaurus.png"
   },
   {
@@ -128,7 +128,7 @@
   {
     "id": 22,
     "nom": "Pelotazos",
-    "preu": 1.30,
+    "preu": 1.99,
     "img": "../assets/img/products/pelotazos.png"
   },
   {

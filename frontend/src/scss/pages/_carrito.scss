@@ -23,13 +23,13 @@
         gap: 16px;
         padding: 10px;
         text-align: left;
-        border-bottom: 1px solid $verd-clar;
+        border-bottom: 1px solid $fons-pagina;
     }
 
     .img-carret {
         width: 60px;
         height: 60px;
-        background-color: $verd-clar;
+        background-color: $fons-pagina;
         border-radius: 10px;
     }
 
@@ -69,15 +69,15 @@
         display: inline-block;
         padding: 8px 14px;
         cursor: pointer;
-        background-color: $verd-clar;
-        border: 1px solid $verd-fosc;
+        background-color: $fons-pagina;
+        border: 1px solid $verd-principal;
         border-radius: 10px;
         font-size: 16px;
-        color: $text;
+        color: $color-text;
         text-decoration: none;
 
         &:hover {
-            background-color: $verd-fosc;
+            background-color: $verd-principal;
         }
     }
 }

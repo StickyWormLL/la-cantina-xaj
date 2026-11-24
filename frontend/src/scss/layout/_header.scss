@@ -4,7 +4,7 @@
     position: sticky;
     top: 0;
     background-color: $blanc;
-    border-bottom: 1px solid $vora;
+    border-bottom: 1px solid $color-vora;
     z-index: 9999;
 }
 
@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    color: $text;
+    color: $color-text;
     text-decoration: none;
 }
 
@@ -54,11 +54,11 @@
     border-radius: 20px;
     font-size: 15px;
     font-weight: bold;
-    color: $text;
+    color: $color-text;
     text-decoration: none;
 
     &:hover {
-        background-color: $gris;
+        background-color: $gris-clar;
     }
 }
 
@@ -76,7 +76,7 @@
         flex-direction: column;
         padding: 16px;
         background-color: $blanc;
-        border-bottom: 1px solid $vora;
+        border-bottom: 1px solid $color-vora;
     }
 
     .nav__list.is-open {
