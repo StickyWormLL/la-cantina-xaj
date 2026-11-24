@@ -2,14 +2,12 @@
 session_start();
 require_once '../logic/funcions.php';
 
-// Afegir al carret des de favorits
 if (isset($_POST['id'])) {
     afegirAlCarret($_POST['id']);
     header("Location: favorits.php");
     exit();
 }
 
-// Treure de favorits amb el cor
 if (isset($_POST['favorit'])) {
     canviarFavorit($_POST['favorit']);
     header("Location: favorits.php");

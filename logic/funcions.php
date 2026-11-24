@@ -97,4 +97,46 @@ function carregarFavorits() {
     return $favorits;
 }
 
+function guardarProductes($productes) {
+    $json = json_encode(array_values($productes), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    file_put_contents("../data/productes.json", $json);
+}
+
+function afegirProducte($nom, $preu, $img) {
+    $productes = carregarProductes();
+    $nouId = 1;
+    foreach ($productes as $producte) {
+        if ($producte['id'] >= $nouId) {
+            $nouId = $producte['id'] + 1;
+        }
+    }
+    $productes[] = [
+        "id" => $nouId,
+        "nom" => $nom,
+        "preu" => (float) $preu,
+        "img" => "../assets/img/products/" . $img
+    ];
+    guardarProductes($productes);
+}
+
+function canviarPreu($id, $preu) {
+    $productes = carregarProductes();
+    foreach ($productes as $i => $producte) {
+        if ($producte['id'] == $id) {
+            $productes[$i]['preu'] = (float) $preu;
+        }
+    }
+    guardarProductes($productes);
+}
+
+function eliminarProducte($id) {
+    $productes = carregarProductes();
+    foreach ($productes as $i => $producte) {
+        if ($producte['id'] == $id) {
+            unset($productes[$i]);
+        }
+    }
+    guardarProductes($productes);
+}
+
 ?>

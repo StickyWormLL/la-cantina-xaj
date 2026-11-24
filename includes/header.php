@@ -1,5 +1,4 @@
 <?php
-// El header mostra quants productes hi ha al carret
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
