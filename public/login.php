@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($llistaUsuaris as $usuaris) { // Itera sobre cada usuari del JSON per comprovar si coincideix amb les credencials introduïdes
         if ($usuaris['username'] === $user && $usuaris['contrasenya'] === $password) {
             $_SESSION['usuari'] = $usuaris['username'];
-            header('Location: compra.php');  // Redirigeix a la pàgina de compra si les credencials són correctes
+            header('Location: admin.php');  // Redirigeix a la pàgina de compra si les credencials són correctes
             exit;
         }
     }
