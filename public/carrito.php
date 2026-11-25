@@ -76,15 +76,13 @@ $total = 0;
                         </li>
                     <?php endforeach; ?>
                 </ul>
-
-                <p class="total-carret">Total: <?= number_format($total, 2) ?> euros</p>
-
                 <div class="botons-carret">
-                    <a href="compra.php" class="btn-default">Seguir comprant</a>
-                    <form method="post" action="">
+                    <div class="btns-carret">
+                        <button href="compra.php" class="btn-default">Seguir comprant</button>
                         <button type="submit" name="accio" value="buidar" class="btn-default">Buidar carret</button>
-                    </form>
-                    <a href="finalitzacio.php" class="btn-default">Finalitzar compra</a>
+                        <button href="finalitzacio.php" class="btn-default">Finalitzar compra</button>
+                    </div>
+                    <div><p class="total-carret">Total: <?= number_format($total, 2) ?> euros</p></div>
                 </div>
 
             <?php endif; ?>
