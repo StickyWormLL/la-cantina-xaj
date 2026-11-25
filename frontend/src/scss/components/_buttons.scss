@@ -47,3 +47,19 @@
         border-color: $color-text;
     }
 }
+.btn-favorit {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    color: $color-text;
+    align-items: center;
+    justify-content: center;
+    background-color: $blanc;
+    border: 1px solid $color-vora;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-vora;
+    }
+}
