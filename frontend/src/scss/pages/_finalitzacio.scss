@@ -1,0 +1,200 @@
+@use '../abstracts/variables' as *;
+
+.finalitzacio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 40px;
+    padding: 20px 0 40px;
+    color: $blanc;
+
+    .titol-finalitzacio {
+        margin: 0 0 10px;
+        color: $color-titol;
+        font-size: 22px;
+    }
+
+    .finalitzacio-buit {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .btn-finalitzacio {
+        display: inline-block;
+        padding: 8px 14px;
+        cursor: pointer;
+        background-color: $verd-boto;
+        border: 1px solid $verd-boto-hover;
+        border-radius: 10px;
+        font-size: 16px;
+        color: $color-text;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $verd-boto-hover;
+        }
+    }
+
+    .botons-finalitzacio {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    a {
+        color: $color-titol;
+    }
+}
+
+/* Tiquet de compra */
+.tiquet {
+    padding: 20px;
+    border: 1px solid $verd-boto;
+    border-radius: 10px;
+
+    .data-tiquet {
+        margin: 0;
+        padding-bottom: 10px;
+        font-size: 14px;
+        color: $gris-clar;
+        border-bottom: 1px solid $verd-boto;
+    }
+
+    .llista-tiquet {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .item-tiquet {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+        text-align: left;
+        border-bottom: 1px solid $verd-boto;
+    }
+
+    .quantitat-tiquet {
+        font-weight: bold;
+        color: $color-titol;
+    }
+
+    .nom-tiquet {
+        flex: 1;
+    }
+
+    .fila-tiquet {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0 0;
+        color: $gris-clar;
+    }
+
+    .total-tiquet {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0 20px;
+        padding-top: 10px;
+        border-top: 1px solid $verd-boto;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .btn-finalitzacio {
+        text-decoration: none;
+        color: $color-text;
+    }
+}
+
+/* Formulari de dades */
+.form-finalitzacio {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .titol-finalitzacio {
+        margin: 0;
+    }
+
+    .text-finalitzacio {
+        margin: 0;
+        font-size: 14px;
+        color: $gris-clar;
+    }
+
+    .fila-camps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .camp-finalitzacio {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-weight: bold;
+
+        input,
+        textarea {
+            padding: 8px 10px;
+            border: 1px solid $verd-boto-hover;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+    }
+
+    .check-finalitzacio {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .error-finalitzacio {
+        margin: 0;
+        padding: 10px;
+        background-color: $color-titol;
+        border-radius: 10px;
+        color: $color-text;
+        font-weight: bold;
+    }
+
+    .error-camp {
+        font-size: 14px;
+        font-weight: normal;
+        color: $color-titol;
+    }
+
+    .btn-finalitzacio {
+        color: $color-text;
+    }
+}
+
+/* Missatge de comanda feta */
+.comanda-feta {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid $verd-boto;
+    border-radius: 10px;
+
+    .btn-finalitzacio {
+        color: $color-text;
+    }
+}
+
+@media (max-width: $tablet) {
+    .finalitzacio {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: $mobil) {
+    .form-finalitzacio .fila-camps {
+        grid-template-columns: 1fr;
+    }
+}
