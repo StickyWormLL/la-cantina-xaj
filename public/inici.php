@@ -35,28 +35,24 @@ $ofertes = ofertesDelDia();
 
 <body>
     <?php include '../includes/header.php'; ?>
-    <div id="carrousel">
-        <div class="carousel-container">
-            <div class="carousel-images">
-                <img src="../assets/img/products/carrousel_bocadillo_jamon.jpg" alt="Imagen 1">
-                <img src="../assets/img/products/carrousel_empanada_atun.jpg" alt="Imagen 2">
-                <img src="../assets/img/products/carrousel_coca_cola.jpg" alt="Imagen 3">
-                <img src="../assets/img/products/carrousel_cafe.jpg" alt="Imagen 4">
-                <img src="../assets/img/products/carrousel_panini_atun.jpg" alt="Imagen 5">
-                <img src="../assets/img/products/carrousel_croissant.jpg" alt="Imagen 6">
-                <img src="../assets/img/products/carrousel_bocadillo_jamon.jpg" alt="Imagen 7">
-            </div>
-            <div id="carousel-text">
-                <p><b>Esmorzar, dinar i berenar sense fer cua.</b></p>
-            </div>
+    <section class="carrusel">
+        <div class="carrusel__imatges">
+            <img class="carrusel__imatge" src="../assets/img/products/carrousel_bocadillo_jamon.jpg" alt="Entrepà de pernil">
+            <img class="carrusel__imatge" src="../assets/img/products/carrousel_empanada_atun.jpg" alt="Empanada de tonyina">
+            <img class="carrusel__imatge" src="../assets/img/products/carrousel_coca_cola.jpg" alt="Coca-Cola">
+            <img class="carrusel__imatge" src="../assets/img/products/carrousel_cafe.jpg" alt="Cafè">
+            <img class="carrusel__imatge" src="../assets/img/products/carrousel_panini_atun.jpg" alt="Panini de tonyina">
+            <img class="carrusel__imatge" src="../assets/img/products/carrousel_croissant.jpg" alt="Croissant">
+            <img class="carrusel__imatge" src="../assets/img/products/carrousel_bocadillo_jamon.jpg" alt="" aria-hidden="true">
         </div>
-    </div>
+        <p class="carrusel__text">Esmorzar, dinar i berenar sense fer cua.</p>
+    </section>
 
     <div class="container">
         <section class="ofertes">
-            <div class="cap-ofertes">
-                <h2 id="ofertes_dia_tit" class="titolPagina">Ofertes del dia</h2>
-                <a href="compra.php" id="veureproductes" class="btn-default">Veure tots els productes</a>
+            <div class="ofertes__capcalera">
+                <h2 class="titolPagina">Ofertes del dia</h2>
+                <a href="compra.php" class="btn-default">Veure tots els productes</a>
             </div>
 
             <div class="catalegProductes">
@@ -95,36 +91,39 @@ $ofertes = ofertesDelDia();
         </section>
 
         <section class="nosaltres">
-            <div class="text-nosaltres">
-                <h2 class="titol-inici titol-nosaltres">La cantina del campus des de 2022</h2>
-                <p>Som l'equip que obre la barra abans de la primera classe i la tanca quan acaben les últimes
-                    pràctiques.</p>
-                <p>Cuinem aquí mateix: entrepans calents a la planxa, braves fetes al moment i brioixeria dolça i
-                    salada fornejada cada matí. Amb aquesta web deixes la comanda feta i la reculls sense fer cua.</p>
-                <a href="compra.php" class="btn-default">Fer una comanda</a>
+            <div>
+                <h2 class="nosaltres__titol">La cantina del campus des de 2022</h2>
+                <p class="nosaltres__text">Som l'equip que obre la barra abans de la primera classe i la tanca quan
+                    acaben les últimes pràctiques.</p>
+                <p class="nosaltres__text">Cuinem aquí mateix: entrepans calents a la planxa, braves fetes al moment i
+                    brioixeria dolça i salada fornejada cada matí. Amb aquesta web deixes la comanda feta i la reculls
+                    sense fer cua.</p>
+                <div class="nosaltres__accions">
+                    <a href="compra.php" class="btn-default">Fer una comanda</a>
+                </div>
             </div>
 
             <div class="passos">
-                <h3 class="titol-passos">Com funciona</h3>
-                <div class="pas">
-                    <span class="num-pas">1</span>
+                <h3 class="passos__titol">Com funciona</h3>
+                <div class="passos__pas">
+                    <span class="passos__numero">1</span>
                     <div>
-                        <p class="nom-pas">Tria</p>
-                        <p>Entrepans, patates, brioixeria i begudes, segons l'hora del dia.</p>
+                        <p class="passos__nom">Tria</p>
+                        <p class="passos__descripcio">Entrepans, patates, brioixeria i begudes, segons l'hora del dia.</p>
                     </div>
                 </div>
-                <div class="pas">
-                    <span class="num-pas">2</span>
+                <div class="passos__pas">
+                    <span class="passos__numero">2</span>
                     <div>
-                        <p class="nom-pas">Revisa el tiquet</p>
-                        <p>Afegeix o treu unitats i mira el total actualitzat al moment.</p>
+                        <p class="passos__nom">Revisa el tiquet</p>
+                        <p class="passos__descripcio">Afegeix o treu unitats i mira el total actualitzat al moment.</p>
                     </div>
                 </div>
-                <div class="pas">
-                    <span class="num-pas">3</span>
+                <div class="passos__pas">
+                    <span class="passos__numero">3</span>
                     <div>
-                        <p class="nom-pas">Recull a la barra</p>
-                        <p>Deixa nom, telèfon i correu i et guardem la comanda.</p>
+                        <p class="passos__nom">Recull a la barra</p>
+                        <p class="passos__descripcio">Deixa nom, telèfon i correu i et guardem la comanda.</p>
                     </div>
                 </div>
             </div>

@@ -45,14 +45,22 @@ $llistaFavorits = carregarFavorits();
             <section class="catalegProductes">
 
                 <?php foreach ($llistaFavorits as $producte): ?>
-                    <article class="card-producte">
+                    <article class="card-producte<?= esOferta($producte['id']) ? ' card-oferta' : '' ?>">
+                        <?php if (esOferta($producte['id'])): ?>
+                            <span class="etiqueta-oferta">-<?= DESCOMPTE_OFERTA * 100 ?>%</span>
+                        <?php endif; ?>
+                        <img class="img-producte" src="<?= $producte['img'] ?>" alt="<?= $producte['nom'] ?>">
                         <h3 class="nom-producte"><?= $producte['nom'] ?></h3>
-                        <img class="img-producte" src="<?= $producte['img'] ?>">
-                        <p class="preu-producte">Preu: <?= $producte['preu'] ?> euros</p>
+                        <p class="preu-producte">
+                            <?php if (esOferta($producte['id'])): ?>
+                                <span class="preu-antic"><?= number_format($producte['preu'], 2) ?> €</span>
+                            <?php endif; ?>
+                            <?= number_format(preuFinal($producte), 2) ?> €
+                        </p>
                         <div class="botons-producte">
                             <form method="post" action="">
                                 <input type="hidden" name="id" value="<?= $producte['id'] ?>">
-                                <button type="submit" class="btn-afegirCarret">Afegeix al carret</button>
+                                <button type="submit" class="btn-default">Afegeix al carret</button>
                             </form>
                             <form method="post" action="">
                                 <input type="hidden" name="favorit" value="<?= $producte['id'] ?>">

@@ -1,156 +1,112 @@
 @use '../abstracts/variables' as *;
 
-.carousel-container {
+// Carrusel: 6 fotos + un clon de la primera perquè el bucle no salti
+.carrusel {
     position: relative;
-    width: 100%;
     height: 540px;
-    margin: auto;
     overflow: hidden;
-}
 
-#carousel-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Lo centra exactamente en el medio */
-    z-index: 2;
-    /* Asegura que esté por encima de las imágenes */
-    color: white;
-    text-align: center;
-    width: 85%;
-    /* Evita que el texto toque los bordes del contenedor */
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-    /* Sombra suave para mejorar la lectura */
-    font-size: 48px;
-}
-
-.carousel-images {
-    display: flex;
-    width: 100%;
-    animation: slide 24s infinite ease-in-out;
-}
-
-.carousel-images img {
-    width: 100%;
-    /* Se ajusta al contenedor */
-    height: 100%;
-    flex: 0 0 auto;
-    /* 3 imágenes en un 100% */
-    object-fit: cover;
-    /* Evita distorsión */
-    object-position: center;
-    filter: (5px);
-    filter: brightness(0.3);
-}
-
-@keyframes slide {
-
-    /* Foto 1: quieta 2s (0% a 8.33%) */
-    0%,
-    8.33% {
-        transform: translateX(0);
+    &__imatges {
+        display: flex;
+        height: 100%;
+        animation: lliscar 24s infinite ease-in-out;
     }
 
-    /* Foto 2: desliza 2s y quieta 2s (16.66% a 25%) */
-    16.66%,
-    25% {
-        transform: translateX(-100%);
+    &__imatge {
+        width: 100%;
+        height: 100%;
+        flex: 0 0 auto;
+        object-fit: cover;
+        filter: brightness(0.3);
     }
 
-    /* Foto 3: desliza 2s y quieta 2s (33.33% a 41.66%) */
-    33.33%,
-    41.66% {
-        transform: translateX(-200%);
-    }
-
-    /* Foto 4: desliza 2s y quieta 2s (50% a 58.33%) */
-    50%,
-    58.33% {
-        transform: translateX(-300%);
-    }
-
-    /* Foto 5: desliza 2s y quieta 2s (66.66% a 75%) */
-    66.66%,
-    75% {
-        transform: translateX(-400%);
-    }
-
-    /* Foto 6: desliza 2s y quieta 2s (83.33% a 91.66%) */
-    83.33%,
-    91.66% {
-        transform: translateX(-500%);
-    }
-
-    /* Clon Foto 1: desliza 2s hasta el final */
-    100% {
-        transform: translateX(-600%);
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 85%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+        color: $blanc;
+        font-size: $mida-titol;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 0 2px 6px rgba($color-text, 0.7);
     }
 }
 
-.subtitol-inici {
-    margin: 0;
-    color: $gris-clar;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
+// Cada foto queda quieta i després llisca a la següent
+@keyframes lliscar {
+    0%, 8.33% { transform: translateX(0); }
+    16.66%, 25% { transform: translateX(-100%); }
+    33.33%, 41.66% { transform: translateX(-200%); }
+    50%, 58.33% { transform: translateX(-300%); }
+    66.66%, 75% { transform: translateX(-400%); }
+    83.33%, 91.66% { transform: translateX(-500%); }
+    100% { transform: translateX(-600%); }
 }
 
-/* Ofertes del dia */
 .ofertes {
-    padding: 30px 0 20px;
-
-    .cap-ofertes {
+    &__capcalera {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
         gap: 10px;
         padding-bottom: 10px;
-        border-bottom: 1px solid $verd-principal;
+        border-bottom: 1px solid $color-vora;
     }
 }
 
-/* Sobre nosaltres i com funciona */
 .nosaltres {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     padding: 20px 0 40px;
 
-    .text-nosaltres p {
+    &__titol {
+        margin: 0 0 10px;
+        color: $verd-principal;
+        font-size: $mida-gran;
+    }
+
+    &__text {
+        margin: 0 0 10px;
+        color: $color-text-suau;
+        font-size: $mida-normal;
         line-height: 1.5;
     }
 
-    .passos {
-        padding: 20px;
-        border: 1px solid $verd-principal;
-        border-radius: 10px;
+    &__accions {
+        padding-top: 10px;
     }
+}
 
-    .titol-passos {
+.passos {
+    padding: 20px;
+    background-color: $blanc;
+    border: 1px solid $vora-targeta;
+    border-radius: 12px;
+
+    &__titol {
         margin: 0 0 10px;
-        color: $color-titol;
-        font-size: 22px;
+        color: $verd-principal;
+        font-size: $mida-gran;
     }
 
-    .pas {
+    &__pas {
         display: flex;
         align-items: flex-start;
         gap: 16px;
         padding: 10px 0;
-        border-bottom: 1px solid $verd-principal;
+        border-bottom: 1px solid $color-vora;
 
         &:last-child {
             border-bottom: none;
         }
-
-        p {
-            margin: 0 0 4px;
-        }
     }
 
-    .num-pas {
+    &__numero {
         width: 38px;
         height: 38px;
         display: flex;
@@ -159,19 +115,32 @@
         flex-shrink: 0;
         background-color: $verd-principal;
         border-radius: 50%;
+        font-size: $mida-normal;
         font-weight: bold;
-        color: $color-text;
+        color: $blanc;
     }
 
-    .nom-pas {
-        font-size: 18px;
+    &__nom {
+        margin: 0 0 4px;
+        color: $color-text;
+        font-size: $mida-mitjana;
         font-weight: bold;
+    }
+
+    &__descripcio {
+        margin: 0;
+        color: $color-text-suau;
+        font-size: $mida-petita;
     }
 }
 
 @media (max-width: $mobil) {
-    .titol-inici {
-        font-size: 22px;
+    .carrusel {
+        height: 360px;
+
+        &__text {
+            font-size: $mida-gran;
+        }
     }
 
     .nosaltres {
