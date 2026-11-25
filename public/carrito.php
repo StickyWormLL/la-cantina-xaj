@@ -53,7 +53,7 @@ $total = 0;
                     <?php foreach ($carret as $id => $quantitat): ?>
                         <?php
                         $producte = buscarProducte($id);
-                        $subtotal = $producte['preu'] * $quantitat;
+                        $subtotal = preuFinal($producte) * $quantitat;
                         $total += $subtotal;
                         ?>
                         <li class="item-carret">

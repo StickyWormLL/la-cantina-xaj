@@ -88,33 +88,12 @@
     }
 }
 
-.titol-inici {
-    margin: 10px 0;
-    color: $color-titol;
-    font-size: 26px;
-}
-
 .subtitol-inici {
     margin: 0;
     color: $gris-clar;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.btn-inici {
-    display: inline-block;
-    padding: 8px 14px;
-    cursor: pointer;
-    background-color: $verd-boto;
-    border-radius: 10px;
-    font-size: 16px;
-    color: $color-text;
-    text-decoration: none;
-
-    &:hover {
-        background-color: $verd-boto-hover;
-    }
 }
 
 /* Ofertes del dia */
@@ -129,36 +108,6 @@
         gap: 10px;
         padding-bottom: 10px;
         border-bottom: 1px solid $verd-principal;
-    }
-
-    .llista-ofertes {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        padding: 20px 0;
-    }
-
-    .card-oferta {
-        position: relative;
-        padding: 20px;
-        border: 1px solid $verd-principal;
-        border-radius: 10px;
-
-        &:hover {
-            background-color: $verd-boto-hover;
-        }
-    }
-
-    .etiqueta-oferta {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        padding: 4px 10px;
-        background-color: $color-titol;
-        border-radius: 10px;
-        font-size: 14px;
-        font-weight: bold;
-        color: $color-text;
     }
 }
 
@@ -220,12 +169,6 @@
     }
 }
 
-@media (max-width: $tablet) {
-    .ofertes .llista-ofertes {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (max-width: $mobil) {
     .titol-inici {
         font-size: 22px;
@@ -234,11 +177,5 @@
     .nosaltres {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-}
-
-@media (max-width: $mobil-petit) {
-    .ofertes .llista-ofertes {
-        grid-template-columns: 1fr;
     }
 }

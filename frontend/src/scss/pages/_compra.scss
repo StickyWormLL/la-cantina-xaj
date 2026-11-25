@@ -20,44 +20,6 @@
     }
 }
 
-.card-producte {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    .nom-producte {
-        margin: 0 0 10px;
-        color: $color-titol;
-        font-size: $mida-gran;
-    }
-
-    .img-producte {
-        width: 100%;
-        max-width: 256px;
-        margin-top: auto;
-        background-color: $verd-boto;
-        border-radius: 10px;
-    }
-
-    .preu-producte {
-        color: $color-titol;
-        font-size: $mida-normal;
-    }
-
-    .botons-producte {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    @media (max-width: $mobil) {
-        .nom-producte {
-            font-size: $mida-mitjana;
-        }
-    }
-}
-
 .btn-afegirCarret {
     display: inline-block;
     padding: 8px 14px;

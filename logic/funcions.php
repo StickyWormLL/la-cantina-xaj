@@ -155,7 +155,7 @@ function eliminarProducte($id)
 
 /*
     OFERTES DEL DIA
-    ES TRIEN 3 PRODUCTES A L'ATZAR, PERÒ SEMPRE ELS MATEIXOS DURANT TOT EL DIA
+    ES TRIEN 4 PRODUCTES A L'ATZAR, PERÒ SEMPRE ELS MATEIXOS DURANT TOT EL DIA
 */
 
 function ofertesDelDia()
@@ -164,7 +164,29 @@ function ofertesDelDia()
     srand((int) date('Ymd'));
     shuffle($productes);
     srand();
-    return array_slice($productes, 0, 3);
+    return array_slice($productes, 0, 4);
+}
+
+// Descompte que s'aplica als productes en oferta (20%)
+const DESCOMPTE_OFERTA = 0.2;
+
+function esOferta($id)
+{
+    foreach (ofertesDelDia() as $oferta) {
+        if ($oferta['id'] == $id) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// Preu que es cobra: amb descompte si el producte està en oferta
+function preuFinal($producte)
+{
+    if (esOferta($producte['id'])) {
+        return round($producte['preu'] * (1 - DESCOMPTE_OFERTA), 2);
+    }
+    return $producte['preu'];
 }
 
 // USUARIS

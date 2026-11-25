@@ -9,6 +9,13 @@ if (isset($_POST['id'])) {
     exit();
 }
 
+// Quan es prem el cor s'afegeix o es treu de favorits
+if (isset($_POST['favorit'])) {
+    canviarFavorit($_POST['favorit']);
+    header("Location: inici.php");
+    exit();
+}
+
 $ofertes = ofertesDelDia();
 ?>
 <!DOCTYPE html>
@@ -52,19 +59,36 @@ $ofertes = ofertesDelDia();
                 <a href="compra.php" id="veureproductes" class="btn-default">Veure tots els productes</a>
             </div>
 
-            <div class="llista-ofertes">
-                <?php foreach ($ofertes as $i => $producte): ?>
-                    <article id="product<?= $i + 1 ?>" class="card-producte">
-                        <h3 class="nom-producte"><?= $producte['nom'] ?></h3>
+            <div class="catalegProductes">
+                <?php foreach ($ofertes as $producte): ?>
+                    <article class="card-producte<?= esOferta($producte['id']) ? ' card-oferta' : '' ?>">
+                        <?php if (esOferta($producte['id'])): ?>
+                            <span class="etiqueta-oferta">-<?= DESCOMPTE_OFERTA * 100 ?>%</span>
+                        <?php endif; ?>
                         <img class="img-producte" src="<?= $producte['img'] ?>" alt="<?= $producte['nom'] ?>">
+                        <h3 class="nom-producte"><?= $producte['nom'] ?></h3>
                         <p class="preu-producte">
-                            <span class="preu-antic"><?= number_format($producte['preu'], 2) ?> euros</span>
-                            <span class="preu-oferta"><?= number_format($producte['preu'] * 0.8, 2) ?> euros</span>
+                            <?php if (esOferta($producte['id'])): ?>
+                                <span class="preu-antic"><?= number_format($producte['preu'], 2) ?> €</span>
+                            <?php endif; ?>
+                            <?= number_format(preuFinal($producte), 2) ?> €
                         </p>
-                        <form method="post" action="">
-                            <input type="hidden" name="id" value="<?= $producte['id'] ?>">
-                            <button type="submit" class="btn-default">Afegeix al carret</button>
-                        </form>
+                        <div class="botons-producte">
+                            <form method="post" action="">
+                                <input type="hidden" name="id" value="<?= $producte['id'] ?>">
+                                <button type="submit" class="btn-default">Afegeix al carret</button>
+                            </form>
+                            <form method="post" action="">
+                                <input type="hidden" name="favorit" value="<?= $producte['id'] ?>">
+                                <button type="submit" class="btn-favorit">
+                                    <?php if (esFavorit($producte['id'])): ?>
+                                        <img src="../assets/img/icons/favorite-fill.svg" alt="Treure de favorits">
+                                    <?php else: ?>
+                                        <img src="../assets/img/icons/favorite.svg" alt="Afegir a favorits">
+                                    <?php endif; ?>
+                                </button>
+                            </form>
+                        </div>
                     </article>
                 <?php endforeach; ?>
             </div>

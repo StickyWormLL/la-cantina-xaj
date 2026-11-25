@@ -37,7 +37,7 @@ if (isset($_POST['nom'])) {
         $total = 0;
         foreach ($carret as $id => $quantitat) {
             $producte = buscarProducte($id);
-            $subtotal = $producte['preu'] * $quantitat;
+            $subtotal = preuFinal($producte) * $quantitat;
             $total += $subtotal;
             $text .= $quantitat . " x " . $producte['nom'];
             $text .= " - " . number_format($subtotal, 2) . " euros\n";
@@ -116,7 +116,7 @@ $total = 0;
                         <?php foreach ($carret as $id => $quantitat): ?>
                             <?php
                             $producte = buscarProducte($id);
-                            $subtotal = $producte['preu'] * $quantitat;
+                            $subtotal = preuFinal($producte) * $quantitat;
                             $total += $subtotal;
                             ?>
                             <li class="item-tiquet">

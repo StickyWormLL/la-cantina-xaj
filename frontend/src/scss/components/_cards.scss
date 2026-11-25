@@ -3,82 +3,76 @@
 .card-producte {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    overflow: hidden;
+    background-color: $blanc;
+    border: 1px solid $vora-targeta;
+    border-radius: 12px;
 
-    .nom-producte {
-        margin: 0 0 10px;
-        color: $color-titol;
-        font-size: $mida-gran;
+    &:hover {
+        border-color: $verd-principal;
     }
 
     .img-producte {
         width: 100%;
-        max-width: 256px;
-        margin-top: auto;
-        background-color: $verd-boto;
-        border-radius: 10px;
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
+        background-color: $fons-imatge;
+    }
+
+    .nom-producte {
+        margin: 14px 16px 4px;
+        color: $color-text;
+        font-size: $mida-mitjana;
     }
 
     .preu-producte {
-        color: $color-titol;
-        font-size: $mida-normal;
+        margin: 0 16px 14px;
+        color: $verd-principal;
+        font-size: $mida-mitjana;
+        font-weight: bold;
     }
 
     .botons-producte {
         display: flex;
         align-items: center;
         gap: 10px;
-    }
+        margin: auto 16px 16px;
 
-    @media (max-width: $mobil) {
-        .nom-producte {
-            font-size: $mida-mitjana;
+        form:first-child {
+            flex: 1;
         }
     }
 }
 
-.pagina-compra {
-    .card-producte {
-        overflow: hidden;
-        background-color: $blanc;
-        border: 1px solid $vora-targeta;
-        border-radius: 12px;
-        text-align: left;
-        align-items: stretch;
+.card-oferta {
+    position: relative;
+    border-color: $color-oferta;
 
-        &:hover {
-            border-color: $verd-principal;
-        }
+    &:hover {
+        border-color: $color-oferta;
+    }
 
-        .img-producte {
-            max-width: none;
-            margin: 0;
-            aspect-ratio: 4 / 3;
-            object-fit: contain;
-            background-color: $fons-imatge;
-            border-radius: 0;
-        }
+    .etiqueta-oferta {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 4px 10px;
+        background-color: $color-oferta;
+        border-radius: 10px;
+        font-size: $mida-petita;
+        font-weight: bold;
+        color: $blanc;
+    }
 
-        .nom-producte {
-            margin: 14px 16px 4px;
-            color: $color-text;
-            font-size: $mida-mitjana;
-        }
+    .preu-producte {
+        color: $color-oferta;
+    }
 
-        .preu-producte {
-            margin: 0 16px 14px;
-            color: $verd-principal;
-            font-size: $mida-mitjana;
-            font-weight: bold;
-        }
-
-        .botons-producte {
-            margin: auto 16px 16px;
-
-            form:first-child {
-                flex: 1;
-            }
-        }
+    .preu-antic {
+        margin-right: 6px;
+        color: $color-text-suau;
+        font-size: $mida-petita;
+        font-weight: normal;
+        text-decoration: line-through;
     }
 }
