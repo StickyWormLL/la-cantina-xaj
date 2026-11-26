@@ -1,13 +1,13 @@
 @use '../abstracts/variables' as *;
 
 .carret {
-    padding: 20px;
-    margin: 20px auto;
+    padding: 10px;
+    margin: 0px auto 20px;
     border-radius: 10px;
 
     .carret-buit {
         font-size: 18px;
-        margin-bottom: 16px;
+            margin-bottom: 25px;
     }
 
     .llista-carret {

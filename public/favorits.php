@@ -33,15 +33,13 @@ $llistaFavorits = carregarFavorits();
 
 <body>
     <?php include '../includes/header.php'; ?>
-
     <div class="container">
         <h1 class="titolPagina">Els teus favorits:</h1>
-
         <?php if (empty($llistaFavorits)): ?>
-            <p>Encara no tens cap favorit. Prem el cor d'un producte per guardar-lo aquí.</p>
-            <a href="compra.php" class="btn-default">Anar a comprar</a>
-        <?php else: ?>
-
+            <div class="container-empty">
+            <p class="text-empty">Encara no tens cap favorit. Prem el cor d'un producte per guardar-lo aquí.</p>
+            <a href="compra.php" class="btn-default">Anar a comprar</a></div>
+            <?php else: ?>
             <section class="catalegProductes">
 
                 <?php foreach ($llistaFavorits as $producte): ?>
