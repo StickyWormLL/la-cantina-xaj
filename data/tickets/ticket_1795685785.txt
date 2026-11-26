@@ -1,0 +1,8 @@
+Client: asd
+Telèfon: 123445678
+Correu: asd@gmail.com
+Observacions: as
+
+1 x Entrepà de pinxo moruno - 3.20 euros
+
+Total: 3.20 euros

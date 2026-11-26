@@ -6,32 +6,34 @@
     align-items: start;
     gap: 40px;
     padding: 20px 0 40px;
-    color: $blanc;
+    color: $color-text;
 
     .titol-finalitzacio {
         margin: 0 0 10px;
-        color: $color-titol;
-        font-size: 22px;
+        color: $verd-principal;
+        font-size: $mida-gran;
     }
 
     .finalitzacio-buit {
-        font-size: 18px;
+        font-size: $mida-mitjana;
         margin-bottom: 16px;
     }
 
     .btn-finalitzacio {
         display: inline-block;
-        padding: 8px 14px;
+        padding: 10px 16px;
         cursor: pointer;
-        background-color: $verd-boto;
-        border: 1px solid $verd-boto-hover;
-        border-radius: 10px;
-        font-size: 16px;
-        color: $color-text;
+        background-color: $verd-principal;
+        border: 1px solid $verd-principal;
+        border-radius: 20px;
+        font-size: $mida-petita;
+        font-weight: bold;
+        color: $blanc;
         text-decoration: none;
 
         &:hover {
-            background-color: $verd-boto-hover;
+            background-color: $color-text;
+            border-color: $color-text;
         }
     }
 
@@ -43,23 +45,24 @@
         margin-top: 10px;
     }
 
-    a {
-        color: $color-titol;
+    a:not(.btn-finalitzacio) {
+        color: $verd-principal;
     }
 }
 
 /* Tiquet de compra */
 .tiquet {
     padding: 20px;
-    border: 1px solid $verd-boto;
-    border-radius: 10px;
+    background-color: $blanc;
+    border: 1px solid $vora-targeta;
+    border-radius: 12px;
 
     .data-tiquet {
         margin: 0;
         padding-bottom: 10px;
-        font-size: 14px;
-        color: $gris-clar;
-        border-bottom: 1px solid $verd-boto;
+        font-size: $mida-petita;
+        color: $color-text-suau;
+        border-bottom: 1px solid $color-vora;
     }
 
     .llista-tiquet {
@@ -74,12 +77,12 @@
         gap: 10px;
         padding: 10px 0;
         text-align: left;
-        border-bottom: 1px solid $verd-boto;
+        border-bottom: 1px solid $color-vora;
     }
 
     .quantitat-tiquet {
         font-weight: bold;
-        color: $color-titol;
+        color: $verd-principal;
     }
 
     .nom-tiquet {
@@ -90,7 +93,7 @@
         display: flex;
         justify-content: space-between;
         margin: 10px 0 0;
-        color: $gris-clar;
+        color: $color-text-suau;
     }
 
     .total-tiquet {
@@ -98,14 +101,9 @@
         justify-content: space-between;
         margin: 10px 0 20px;
         padding-top: 10px;
-        border-top: 1px solid $verd-boto;
-        font-size: 22px;
+        border-top: 1px solid $color-vora;
+        font-size: $mida-gran;
         font-weight: bold;
-    }
-
-    .btn-finalitzacio {
-        text-decoration: none;
-        color: $color-text;
     }
 }
 
@@ -114,6 +112,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding: 20px;
+    background-color: $blanc;
+    border: 1px solid $vora-targeta;
+    border-radius: 12px;
 
     .titol-finalitzacio {
         margin: 0;
@@ -121,8 +123,8 @@
 
     .text-finalitzacio {
         margin: 0;
-        font-size: 14px;
-        color: $gris-clar;
+        font-size: $mida-petita;
+        color: $color-text-suau;
     }
 
     .fila-camps {
@@ -140,10 +142,17 @@
         input,
         textarea {
             padding: 8px 10px;
-            border: 1px solid $verd-boto-hover;
+            background-color: $blanc;
+            color: $color-text;
+            border: 1px solid $color-vora;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: $mida-normal;
             font-family: inherit;
+
+            &:focus {
+                outline: none;
+                border-color: $verd-principal;
+            }
         }
     }
 
@@ -156,33 +165,102 @@
     .error-finalitzacio {
         margin: 0;
         padding: 10px;
-        background-color: $color-titol;
+        background-color: $color-oferta;
         border-radius: 10px;
-        color: $color-text;
+        color: $blanc;
         font-weight: bold;
     }
 
     .error-camp {
-        font-size: 14px;
+        font-size: $mida-petita;
         font-weight: normal;
-        color: $color-titol;
-    }
-
-    .btn-finalitzacio {
-        color: $color-text;
+        color: $color-oferta;
     }
 }
 
 /* Missatge de comanda feta */
 .comanda-feta {
-    grid-column: 1 / -1;
     max-width: 600px;
     padding: 20px;
-    border: 1px solid $verd-boto;
-    border-radius: 10px;
+    background-color: $blanc;
+    border: 1px solid $vora-targeta;
+    border-radius: 12px;
+}
 
-    .btn-finalitzacio {
-        color: $color-text;
+/* Tiquet imprès */
+.tiquet-impres {
+    max-width: 380px;
+    width: 100%;
+    justify-self: end;
+    padding: 24px 20px;
+    background-color: #fffdf7;
+    color: $color-text;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    border: 1px dashed $color-text-suau;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+    &__capcalera {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        padding-bottom: 12px;
+        border-bottom: 1px dashed $color-text-suau;
+        text-align: center;
+
+        strong {
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__client {
+        padding: 12px 0;
+        border-bottom: 1px dashed $color-text-suau;
+
+        p {
+            margin: 3px 0;
+            word-break: break-word;
+        }
+    }
+
+    &__llista {
+        list-style: none;
+        margin: 0;
+        padding: 12px 0;
+        border-bottom: 1px dashed $color-text-suau;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 4px 0;
+        }
+    }
+
+    &__totals {
+        padding: 12px 0;
+        border-bottom: 1px dashed $color-text-suau;
+
+        p {
+            display: flex;
+            justify-content: space-between;
+            margin: 4px 0;
+        }
+    }
+
+    &__total {
+        margin-top: 8px !important;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    &__peu {
+        margin: 14px 0 0;
+        text-align: center;
+        font-size: 12px;
+        color: $color-text-suau;
     }
 }
 
@@ -190,6 +268,11 @@
     .finalitzacio {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .tiquet-impres {
+        justify-self: start;
+        max-width: 100%;
     }
 }
 

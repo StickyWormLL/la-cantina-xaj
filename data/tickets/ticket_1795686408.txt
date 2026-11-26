@@ -1,0 +1,8 @@
+Client: wadaw
+Telèfon: 123456789
+Correu: fsf@gmail.com
+Observacions: asdadw
+
+4 x Entrepà de llom - 12.00 euros
+
+Total: 12.00 euros

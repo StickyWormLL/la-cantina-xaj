@@ -1,0 +1,10 @@
+Client: aaaa
+Telèfon: 123456789
+Correu: a@f.f
+Observacions: a
+
+5 x Te fred - 6.00 euros
+1 x Amanida - 2.80 euros
+1 x Entrepà de pinxo moruno - 3.20 euros
+
+Total: 12.00 euros

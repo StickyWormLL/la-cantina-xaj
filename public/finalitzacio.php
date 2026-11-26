@@ -35,21 +35,39 @@ if (isset($_POST['nom'])) {
         $text .= "\n";
 
         $total = 0;
+        $itemsTiquet = [];
         foreach ($carret as $id => $quantitat) {
             $producte = buscarProducte($id);
             $subtotal = preuFinal($producte) * $quantitat;
             $total += $subtotal;
             $text .= $quantitat . " x " . $producte['nom'];
             $text .= " - " . number_format($subtotal, 2) . " euros\n";
+
+            $itemsTiquet[] = [
+                'quantitat' => $quantitat,
+                'nom' => $producte['nom'],
+                'subtotal' => $subtotal,
+            ];
         }
         $text .= "\nTotal: " . number_format($total, 2) . " euros";
 
+        $fitxerTiquet = time();
+
         // Si no es pot guardar el tiquet no es buida el carret
-        if (@file_put_contents("../data/tickets/ticket_" . time() . ".txt", $text) === false) {
+        if (@file_put_contents("../data/tickets/ticket_" . $fitxerTiquet . ".txt", $text) === false) {
             $errors['tiquet'] = "No s'ha pogut guardar la comanda. Torna-ho a provar o fes-la a la barra.";
         } else {
             buidarCarret();
-            $_SESSION['comandaFeta'] = $nom;
+            $_SESSION['comandaFeta'] = [
+                'num' => $fitxerTiquet,
+                'data' => date('d/m/Y · H:i'),
+                'nom' => $nom,
+                'telefon' => $telefon,
+                'correu' => $correu,
+                'obs' => $obs,
+                'items' => $itemsTiquet,
+                'total' => $total,
+            ];
             header("Location: finalitzacio.php");
             exit();
         }
@@ -87,13 +105,56 @@ $total = 0;
             <section class="finalitzacio">
                 <div class="comanda-feta">
                     <h2 class="titol-finalitzacio">Comanda registrada!</h2>
-                    <p>Gràcies, <?= htmlspecialchars($comandaFeta) ?>. La comanda s'ha desat correctament. Recull-la a
+                    <p>Gràcies, <?= htmlspecialchars($comandaFeta['nom']) ?>. La comanda s'ha desat correctament. Recull-la a
                         la barra i paga en el moment de la recollida.</p>
                     <div class="botons-finalitzacio">
                         <a href="inici.php" class="btn-finalitzacio">Tornar a l'inici</a>
                         <a href="compra.php" class="btn-finalitzacio">Nova comanda</a>
                     </div>
                 </div>
+
+                <aside class="tiquet-impres">
+                    <div class="tiquet-impres__capcalera">
+                        <strong>LA CANTINA</strong>
+                        <span>Tiquet #<?= htmlspecialchars($comandaFeta['num']) ?></span>
+                        <span><?= htmlspecialchars($comandaFeta['data']) ?></span>
+                    </div>
+
+                    <div class="tiquet-impres__client">
+                        <p><strong>Client:</strong> <?= htmlspecialchars($comandaFeta['nom']) ?></p>
+                        <p><strong>Tel:</strong> <?= htmlspecialchars($comandaFeta['telefon']) ?></p>
+                        <p><strong>Correu:</strong> <?= htmlspecialchars($comandaFeta['correu']) ?></p>
+                        <?php if (!empty($comandaFeta['obs'])): ?>
+                            <p><strong>Obs:</strong> <?= htmlspecialchars($comandaFeta['obs']) ?></p>
+                        <?php endif; ?>
+                    </div>
+
+                    <ul class="tiquet-impres__llista">
+                        <?php foreach ($comandaFeta['items'] as $item): ?>
+                            <li>
+                                <span><?= $item['quantitat'] ?>x <?= htmlspecialchars($item['nom']) ?></span>
+                                <span><?= number_format($item['subtotal'], 2) ?> €</span>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+
+                    <div class="tiquet-impres__totals">
+                        <p>
+                            <span>Base imposable</span>
+                            <span><?= number_format($comandaFeta['total'] / 1.1, 2) ?> €</span>
+                        </p>
+                        <p>
+                            <span>IVA 10%</span>
+                            <span><?= number_format($comandaFeta['total'] - $comandaFeta['total'] / 1.1, 2) ?> €</span>
+                        </p>
+                        <p class="tiquet-impres__total">
+                            <span>TOTAL</span>
+                            <span><?= number_format($comandaFeta['total'], 2) ?> €</span>
+                        </p>
+                    </div>
+
+                    <p class="tiquet-impres__peu">--- GRÀCIES PER LA TEVA COMANDA ---</p>
+                </aside>
             </section>
 
         <?php elseif (empty($carret)): ?>
