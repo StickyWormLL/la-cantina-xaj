@@ -37,8 +37,8 @@ $llistaFavorits = carregarFavorits();
         <h1 class="titolPagina">Els teus favorits:</h1>
         <?php if (empty($llistaFavorits)): ?>
             <div class="container-empty">
-            <p class="text-empty">Encara no tens cap favorit. Prem el cor d'un producte per guardar-lo aquí.</p>
-            <a href="compra.php" class="btn-default">Anar a comprar</a></div>
+            <p>Encara no tens cap favorit. Prem el cor d'un producte per guardar-lo aquí.</p>
+            <button href="compra.php" class="btn-default">Anar a comprar</button></div>
             <?php else: ?>
             <section class="catalegProductes">
 
