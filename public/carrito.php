@@ -78,9 +78,9 @@ $total = 0;
                 </ul>
                 <div class="botons-carret">
                     <div class="btns-carret">
-                        <button href="compra.php" class="btn-default">Seguir comprant</button>
+                        <a href="compra.php" class="btn-default">Seguir comprant</a>
                         <button type="submit" name="accio" value="buidar" class="btn-default">Buidar carret</button>
-                        <button href="finalitzacio.php" class="btn-default">Finalitzar compra</button>
+                        <a href="finalitzacio.php" class="btn-default">Finalitzar compra</a>
                     </div>
                     <div><p class="total-carret">Total: <?= number_format($total, 2) ?> euros</p></div>
                 </div>
